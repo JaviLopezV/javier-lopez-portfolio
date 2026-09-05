@@ -47,7 +47,7 @@ const projects = [
     id: "arrow",
     number: "05",
     title: "Template Web Arrow",
-    url: "https://github.com/JaviLopezV/template-web-arrow",
+    url: "https://arrow-template-web.vercel.app/",
     tags: ["Next.js", "i18n", "PWA"],
     tone: "#4f8cff",
     preview: "arrow",
