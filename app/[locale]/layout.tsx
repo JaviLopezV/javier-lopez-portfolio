@@ -1,3 +1,4 @@
+import SiteLoader from "../site-loader";
 import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -56,6 +57,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body>
+        <SiteLoader />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
