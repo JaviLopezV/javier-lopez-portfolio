@@ -1,0 +1,196 @@
+{
+  "Metadata": {
+    "title": "Javier López — Desarrollo web",
+    "description": "Portfolio de Javier López. Productos digitales creados con Next.js, TypeScript y Material UI.",
+    "openGraphTitle": "Javier López — Ideas que viven en la web",
+    "openGraphDescription": "Productos digitales creados con Next.js, TypeScript y Material UI.",
+    "imageAlt": "Portfolio de Javier López"
+  },
+  "Home": {
+    "navProjects": "Proyectos",
+    "availability": "Disponible para nuevos retos",
+    "location": "Desarrollo web · Castellón, España",
+    "heroTitle": "Ideas que viven",
+    "heroEmphasis": "en la web.",
+    "heroDescription": "Diseño y desarrollo experiencias digitales útiles, rápidas y hechas para personas reales.",
+    "viewWork": "Ver trabajo seleccionado",
+    "selectedWork": "Trabajo seleccionado",
+    "visitProject": "Visitar proyecto",
+    "openProject": "Abrir {title}",
+    "footerTitle": "¿Construimos algo que merezca existir?",
+    "footerCopyright": "© 2026 Javier López Villanueva",
+    "footerStack": "Next.js · TypeScript · Material UI",
+    "legalNotice": "Aviso legal",
+    "privacyPolicy": "Privacidad",
+    "cookiePolicy": "Cookies",
+    "languageSpanish": "ES",
+    "languageEnglish": "EN",
+    "cvName": "TU NOMBRE",
+    "cvProfile": "PERFIL PROFESIONAL",
+    "fireHeadline": "Protección contra incendios personalizada y eficaz",
+    "fireCaption": "SEGURIDAD · PREVENCIÓN",
+    "projects": {
+      "cv": {
+        "eyebrow": "Producto digital",
+        "description": "Un asistente bilingüe y privado para crear, personalizar y exportar currículums profesionales con distintas plantillas, sin enviar los datos fuera del navegador."
+      },
+      "aj": {
+        "eyebrow": "Web corporativa",
+        "description": "Plataforma multidioma para una empresa especializada en protección contra incendios, mantenimiento e inspecciones de baja tensión."
+      },
+      "pilates": {
+        "eyebrow": "Plataforma de gestión",
+        "description": "Aplicación multidioma para gestionar clases de pilates, reservas, usuarios y contenidos desde una experiencia diferenciada para clientes y administración."
+      },
+      "muiKit": {
+        "eyebrow": "Sistema de diseño",
+        "description": "Librería pública de componentes React basada en Material UI, con primitivas accesibles, contratos TypeScript y una API compartida entre proyectos."
+      },
+      "arrow": {
+        "eyebrow": "Plantilla web",
+        "description": "Una base corporativa multidioma, accesible y preparada para PWA, con páginas, navegación y contenido centralizados para adaptarla rápidamente a una nueva marca."
+      }
+    }
+  },
+  "Legal": {
+    "backHome": "Volver al inicio",
+    "lastUpdated": "Última actualización: 1 de septiembre de 2026",
+    "documents": {
+      "legal": {
+        "title": "Aviso legal",
+        "description": "Información sobre el titular y las condiciones de uso de este portfolio personal.",
+        "sections": [
+          {
+            "title": "Titular del sitio",
+            "paragraphs": [
+              "Este sitio web es un portfolio personal de Javier López Villanueva, persona física residente en España.",
+              "Contacto: jlopvil@gmail.com.",
+              "El sitio tiene carácter personal, informativo y no comercial. No ofrece contratación, venta de productos ni prestación de servicios profesionales a través de la web."
+            ]
+          },
+          {
+            "title": "Objeto",
+            "paragraphs": [
+              "El sitio presenta proyectos personales y trabajos realizados con fines informativos. El acceso es gratuito y no exige registro."
+            ]
+          },
+          {
+            "title": "Propiedad intelectual",
+            "paragraphs": [
+              "Salvo que se indique lo contrario, los textos, diseño y elementos originales de este sitio pertenecen a Javier López Villanueva. No se autoriza su reproducción, distribución o transformación más allá de los usos permitidos por la ley.",
+              "Las marcas, nombres y contenidos de terceros pertenecen a sus respectivos titulares."
+            ]
+          },
+          {
+            "title": "Enlaces externos",
+            "paragraphs": [
+              "Los enlaces a proyectos o sitios de terceros se facilitan como referencia. Javier López Villanueva no controla sus contenidos, disponibilidad ni políticas y no responde de los daños derivados de su uso."
+            ]
+          },
+          {
+            "title": "Responsabilidad",
+            "paragraphs": [
+              "Se procura mantener la información correcta y disponible, pero no se garantiza la ausencia absoluta de errores, interrupciones o elementos dañinos. El usuario utiliza el sitio bajo su propia responsabilidad."
+            ]
+          },
+          {
+            "title": "Legislación",
+            "paragraphs": [
+              "Este aviso se rige por la legislación española. Cualquier controversia se someterá a los juzgados y tribunales que resulten competentes conforme a la normativa aplicable."
+            ]
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Política de privacidad",
+        "description": "Cómo se tratan los datos personales al visitar este sitio.",
+        "sections": [
+          {
+            "title": "Responsable",
+            "paragraphs": [
+              "Responsable del tratamiento: Javier López Villanueva.",
+              "Contacto para privacidad y ejercicio de derechos: jlopvil@gmail.com."
+            ]
+          },
+          {
+            "title": "Datos tratados",
+            "paragraphs": [
+              "El sitio no incluye formularios, cuentas de usuario, suscripciones, comentarios ni analítica publicitaria. No se solicitan datos directamente.",
+              "La infraestructura de alojamiento puede procesar automáticamente datos técnicos imprescindibles para servir y proteger la web, como dirección IP, fecha y hora, URL solicitada, navegador, sistema operativo, referencia y registros de seguridad."
+            ]
+          },
+          {
+            "title": "Finalidad y base jurídica",
+            "paragraphs": [
+              "Los datos técnicos se tratan para entregar el contenido, mantener la seguridad, prevenir abusos y diagnosticar fallos. La base jurídica es el interés legítimo en operar un sitio seguro y funcional, aplicando minimización de datos.",
+              "No se realizan perfiles, decisiones automatizadas, publicidad comportamental ni comunicaciones comerciales."
+            ]
+          },
+          {
+            "title": "Destinatarios y transferencias",
+            "paragraphs": [
+              "El sitio se aloja en Vercel, que puede actuar como proveedor de infraestructura y tratar registros técnicos. Sus proveedores pueden estar ubicados fuera del Espacio Económico Europeo; cuando corresponde, Vercel declara utilizar mecanismos reconocidos de protección, como cláusulas contractuales tipo.",
+              "No se venden ni ceden datos para fines comerciales."
+            ]
+          },
+          {
+            "title": "Conservación",
+            "paragraphs": [
+              "Los registros técnicos se conservan durante el tiempo necesario para seguridad, funcionamiento y resolución de incidencias, conforme a la configuración y los plazos del proveedor de alojamiento. No se crea una base de datos propia de visitantes."
+            ]
+          },
+          {
+            "title": "Derechos",
+            "paragraphs": [
+              "Puedes solicitar acceso, rectificación, supresión, oposición, limitación o portabilidad escribiendo a jlopvil@gmail.com e indicando tu solicitud. Podrá pedirse información razonable para verificar la identidad.",
+              "También puedes presentar una reclamación ante la Agencia Española de Protección de Datos en www.aepd.es."
+            ]
+          },
+          {
+            "title": "Cambios",
+            "paragraphs": [
+              "Esta política se actualizará si el sitio incorpora formularios, analítica, publicidad u otros tratamientos. La fecha de la versión vigente aparece al inicio."
+            ]
+          }
+        ]
+      },
+      "cookies": {
+        "title": "Política de cookies",
+        "description": "Información sobre cookies y tecnologías similares utilizadas por este sitio.",
+        "sections": [
+          {
+            "title": "Situación actual",
+            "paragraphs": [
+              "La aplicación no instala cookies propias de analítica, publicidad, seguimiento ni personalización. El idioma se determina mediante la URL (/es o /en) y, en la primera visita, mediante la preferencia de idioma enviada por el navegador; no se guarda en una cookie propia.",
+              "Por este motivo no se muestra un banner de consentimiento: no se utilizan cookies no esenciales que requieran autorización previa."
+            ]
+          },
+          {
+            "title": "Infraestructura técnica",
+            "paragraphs": [
+              "El proveedor de alojamiento puede emplear mecanismos estrictamente necesarios para seguridad, equilibrio de carga o protección de despliegues cuando esas funciones estén activas. Estas tecnologías no se usan desde esta aplicación para analítica o publicidad."
+            ]
+          },
+          {
+            "title": "Servicios y enlaces de terceros",
+            "paragraphs": [
+              "Al seguir un enlace hacia otro sitio, se aplican la política de cookies y las decisiones de ese tercero. Este portfolio no controla las cookies que puedan instalar esos sitios externos."
+            ]
+          },
+          {
+            "title": "Cambios futuros",
+            "paragraphs": [
+              "Antes de incorporar analítica, publicidad o cualquier cookie no esencial, se actualizará esta política y se implantará un mecanismo de consentimiento que permita aceptar o rechazar con la misma facilidad."
+            ]
+          },
+          {
+            "title": "Contacto",
+            "paragraphs": [
+              "Para consultas sobre esta política: jlopvil@gmail.com."
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

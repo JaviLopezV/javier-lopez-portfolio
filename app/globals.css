@@ -1,0 +1,56 @@
+:root {
+  --ink: #191a16;
+  --paper: #f3f1e9;
+  --line: rgba(25, 26, 22, 0.18);
+  --acid: #d7ff4f;
+  --muted: #696b61;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(
+      circle at 78% 4%,
+      rgba(215, 255, 79, 0.25),
+      transparent 23rem
+    ),
+    var(--paper);
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  color: inherit;
+}
+::selection {
+  background: var(--acid);
+  color: var(--ink);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "Metadata": {
+    "title": "Javier López — Web development",
+    "description": "Javier López's portfolio. Digital products built with Next.js, TypeScript and Material UI.",
+    "openGraphTitle": "Javier López — Ideas that live on the web",
+    "openGraphDescription": "Digital products built with Next.js, TypeScript and Material UI.",
+    "imageAlt": "Javier López's portfolio"
+  },
+  "Home": {
+    "navProjects": "Projects",
+    "availability": "Available for new opportunities",
+    "location": "Web development · Castellón, Spain",
+    "heroTitle": "Ideas that live",
+    "heroEmphasis": "on the web.",
+    "heroDescription": "I design and develop useful, fast digital experiences made for real people.",
+    "viewWork": "View selected work",
+    "selectedWork": "Selected work",
+    "visitProject": "Visit project",
+    "openProject": "Open {title}",
+    "footerTitle": "Shall we build something worth existing?",
+    "footerCopyright": "© 2026 Javier López Villanueva",
+    "footerStack": "Next.js · TypeScript · Material UI",
+    "legalNotice": "Legal notice",
+    "privacyPolicy": "Privacy",
+    "cookiePolicy": "Cookies",
+    "languageSpanish": "ES",
+    "languageEnglish": "EN",
+    "cvName": "YOUR NAME",
+    "cvProfile": "PROFESSIONAL PROFILE",
+    "fireHeadline": "Effective, custom fire protection",
+    "fireCaption": "SAFETY · PREVENTION",
+    "projects": {
+      "cv": {
+        "eyebrow": "Digital product",
+        "description": "A private, bilingual wizard for creating, customising and exporting professional résumés with multiple templates, without sending data outside the browser."
+      },
+      "aj": {
+        "eyebrow": "Corporate website",
+        "description": "A multilingual platform for a company specializing in fire protection, maintenance and low-voltage inspections."
+      },
+      "pilates": {
+        "eyebrow": "Management platform",
+        "description": "A multilingual application for managing Pilates classes, bookings, users and content through dedicated client and administration experiences."
+      },
+      "muiKit": {
+        "eyebrow": "Design system",
+        "description": "A public React component library built on Material UI, with accessible primitives, TypeScript contracts and a shared API across projects."
+      },
+      "arrow": {
+        "eyebrow": "Website template",
+        "description": "A multilingual, accessible and PWA-ready corporate foundation, with centralised pages, navigation and content for fast adaptation to a new brand."
+      }
+    }
+  },
+  "Legal": {
+    "backHome": "Back to home",
+    "lastUpdated": "Last updated: September 1, 2026",
+    "documents": {
+      "legal": {
+        "title": "Legal notice",
+        "description": "Information about the owner and terms of use of this personal portfolio.",
+        "sections": [
+          {
+            "title": "Site owner",
+            "paragraphs": [
+              "This website is the personal portfolio of Javier López Villanueva, an individual residing in Spain.",
+              "Contact: jlopvil@gmail.com.",
+              "The site is personal, informational and non-commercial. It does not offer contracts, product sales or professional services through the website."
+            ]
+          },
+          {
+            "title": "Purpose",
+            "paragraphs": [
+              "The site presents personal projects and completed work for informational purposes. Access is free and does not require registration."
+            ]
+          },
+          {
+            "title": "Intellectual property",
+            "paragraphs": [
+              "Unless stated otherwise, the original texts, design and elements on this site belong to Javier López Villanueva. Their reproduction, distribution or transformation beyond uses permitted by law is not authorized.",
+              "Third-party trademarks, names and content belong to their respective owners."
+            ]
+          },
+          {
+            "title": "External links",
+            "paragraphs": [
+              "Links to third-party projects or websites are provided for reference. Javier López Villanueva does not control their content, availability or policies and is not liable for damage resulting from their use."
+            ]
+          },
+          {
+            "title": "Liability",
+            "paragraphs": [
+              "Reasonable efforts are made to keep information accurate and available, but the complete absence of errors, interruptions or harmful elements cannot be guaranteed. Visitors use the site at their own responsibility."
+            ]
+          },
+          {
+            "title": "Applicable law",
+            "paragraphs": [
+              "This notice is governed by Spanish law. Disputes will be submitted to the courts with jurisdiction under applicable law."
+            ]
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Privacy policy",
+        "description": "How personal data is processed when visiting this site.",
+        "sections": [
+          {
+            "title": "Controller",
+            "paragraphs": [
+              "Data controller: Javier López Villanueva.",
+              "Privacy and rights contact: jlopvil@gmail.com."
+            ]
+          },
+          {
+            "title": "Data processed",
+            "paragraphs": [
+              "The site has no forms, user accounts, subscriptions, comments or advertising analytics. It does not request data directly.",
+              "The hosting infrastructure may automatically process technical data required to serve and protect the website, such as IP address, date and time, requested URL, browser, operating system, referrer and security logs."
+            ]
+          },
+          {
+            "title": "Purpose and legal basis",
+            "paragraphs": [
+              "Technical data is processed to deliver content, maintain security, prevent abuse and diagnose failures. The legal basis is the legitimate interest in operating a secure and functional website, applying data minimisation.",
+              "There is no profiling, automated decision-making, behavioural advertising or marketing communication."
+            ]
+          },
+          {
+            "title": "Recipients and transfers",
+            "paragraphs": [
+              "The site is hosted by Vercel, which may act as an infrastructure provider and process technical logs. Its providers may be located outside the European Economic Area; where applicable, Vercel states that it uses recognised safeguards such as Standard Contractual Clauses.",
+              "Data is not sold or disclosed for commercial purposes."
+            ]
+          },
+          {
+            "title": "Retention",
+            "paragraphs": [
+              "Technical logs are retained only as necessary for security, operation and incident resolution, according to the hosting provider's configuration and retention periods. No proprietary visitor database is created."
+            ]
+          },
+          {
+            "title": "Your rights",
+            "paragraphs": [
+              "You may request access, correction, deletion, objection, restriction or portability by emailing jlopvil@gmail.com and describing your request. Reasonable information may be requested to verify identity.",
+              "You may also lodge a complaint with the Spanish Data Protection Agency at www.aepd.es."
+            ]
+          },
+          {
+            "title": "Changes",
+            "paragraphs": [
+              "This policy will be updated if the site adds forms, analytics, advertising or other processing. The current version date appears at the top."
+            ]
+          }
+        ]
+      },
+      "cookies": {
+        "title": "Cookie policy",
+        "description": "Information about cookies and similar technologies used by this site.",
+        "sections": [
+          {
+            "title": "Current status",
+            "paragraphs": [
+              "The application does not set first-party analytics, advertising, tracking or personalisation cookies. Language is determined through the URL (/es or /en) and, on the first visit, the browser's language preference; it is not stored in an application cookie.",
+              "No consent banner is displayed because the site does not use non-essential cookies requiring prior authorization."
+            ]
+          },
+          {
+            "title": "Technical infrastructure",
+            "paragraphs": [
+              "The hosting provider may use strictly necessary mechanisms for security, load balancing or deployment protection when those features are enabled. This application does not use them for analytics or advertising."
+            ]
+          },
+          {
+            "title": "Third-party services and links",
+            "paragraphs": [
+              "When following a link to another site, that third party's cookie policy and choices apply. This portfolio does not control cookies set by external websites."
+            ]
+          },
+          {
+            "title": "Future changes",
+            "paragraphs": [
+              "Before adding analytics, advertising or any non-essential cookie, this policy will be updated and a consent mechanism will be implemented that makes accepting and rejecting equally easy."
+            ]
+          },
+          {
+            "title": "Contact",
+            "paragraphs": ["Questions about this policy: jlopvil@gmail.com."]
+          }
+        ]
+      }
+    }
+  }
+}
