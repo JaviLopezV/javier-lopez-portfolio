@@ -11,7 +11,7 @@ const projects = [
     id: "cv",
     number: "01",
     title: "Next CV Builder",
-    url: "https://my-cv-zeta-one.vercel.app/",
+    url: "https://arrow-cv-builder.vercel.app/",
     tags: ["Next.js", "i18n", "Local-first"],
     tone: "#702457",
     preview: "cv",
