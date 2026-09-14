@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { AboutContent } from "./about-content";
 import { Circle } from "@mui/icons-material";
 import { Container, Link, Stack, Typography } from "@jlopvil/mui-kit";
 import { Box, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
@@ -22,7 +24,7 @@ const theme = createTheme({
   },
 });
 
-function SiteHeader() {
+function SiteHeader({ about }: { about: boolean }) {
   const t = useTranslations("Home");
   const locale = useLocale();
   return (
@@ -32,7 +34,7 @@ function SiteHeader() {
           direction="row"
           alignItems="center"
           justifyContent="space-between"
-          sx={{ height: 78 }}
+          sx={{ minHeight: 78, py: 2, flexWrap: "wrap", gap: 2 }}
         >
           <Stack direction="row" alignItems="center" spacing={1.2}>
             <Circle sx={{ fontSize: 12, color: "#a4c92c" }} />
@@ -43,10 +45,19 @@ function SiteHeader() {
           <Stack direction="row" spacing={{ xs: 2, md: 4 }} alignItems="center">
             <Link
               href="#proyectos"
-              underline="none"
+              underline={about ? "none" : "always"}
+              aria-current={!about ? "page" : undefined}
               sx={{ fontSize: 14, fontWeight: 700 }}
             >
               {t("navProjects")}
+            </Link>
+            <Link
+              href="#sobre-mi"
+              underline={about ? "always" : "none"}
+              aria-current={about ? "page" : undefined}
+              sx={{ fontSize: 14, fontWeight: 700 }}
+            >
+              {t("navAbout")}
             </Link>
             <Typography
               sx={{
@@ -60,7 +71,7 @@ function SiteHeader() {
             <Stack direction="row" spacing={1} aria-label="Language">
               <Link
                 component={LocaleLink}
-                href="/"
+                href={about ? "/#sobre-mi" : "/"}
                 locale="es"
                 underline={locale === "es" ? "always" : "hover"}
                 sx={{ fontSize: 13, fontWeight: 800 }}
@@ -69,7 +80,7 @@ function SiteHeader() {
               </Link>
               <Link
                 component={LocaleLink}
-                href="/"
+                href={about ? "/#sobre-mi" : "/"}
                 locale="en"
                 underline={locale === "en" ? "always" : "hover"}
                 sx={{ fontSize: 13, fontWeight: 800 }}
@@ -85,13 +96,29 @@ function SiteHeader() {
 }
 
 export default function Home() {
+  const [about, setAbout] = useState(false);
+  useEffect(() => {
+    const syncSection = () => {
+      const isAbout = window.location.hash === "#sobre-mi";
+      setAbout(isAbout);
+      if (isAbout) window.scrollTo(0, 0);
+    };
+    syncSection();
+    window.addEventListener("hashchange", syncSection);
+    return () => window.removeEventListener("hashchange", syncSection);
+  }, []);
+  useEffect(() => {
+    if (!about && window.location.hash === "#proyectos") {
+      document.getElementById("proyectos")?.scrollIntoView();
+    }
+  }, [about]);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <SiteHeader />
+      <SiteHeader about={about} />
       <Box component="main">
         <Container maxWidth={false} sx={{ px: { xs: 2.5, md: 5, lg: 8 } }}>
-          <HomeContent />
+          {about ? <AboutContent /> : <HomeContent />}
         </Container>
       </Box>
       <SiteFooter />

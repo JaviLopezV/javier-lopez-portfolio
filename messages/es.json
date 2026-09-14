@@ -54,6 +54,44 @@
         "eyebrow": "Web de Pilates",
         "description": "Una web serena y editorial para Lidia Villanueva Bolívar, dedicada al Pilates personalizado y al movimiento consciente a cualquier edad."
       }
+    },
+    "viewResume": "Ver CV (PDF)",
+    "resumePreviewAlt": "Vista previa del currículum de Javier López Villanueva",
+    "navAbout": "Sobre mí",
+    "about": {
+      "eyebrow": "Sobre mí",
+      "title": "Tecnología con criterio.\nProducto con propósito.",
+      "intro": "Soy Javier López Villanueva, Senior Frontend Engineer / Squad Lead especializado en React, Next.js y TypeScript. Combino desarrollo, arquitectura frontend y liderazgo de equipo para convertir necesidades de negocio en interfaces fiables y mantenibles.",
+      "experience": "Experiencia",
+      "skills": "Stack principal",
+      "education": "Formación",
+      "languages": "Idiomas",
+      "educationItems": [
+        "Ingeniería Informática · Universitat Oberta de Catalunya · En curso",
+        "Desarrollo de Aplicaciones Web · Institut de Badia del Vallès",
+        "Sistemas Microinformáticos y Redes · Institut de Badia del Vallès"
+      ],
+      "languageDetail": "Español y catalán nativos · Inglés técnico / profesional",
+      "jobs": [
+        {
+          "company": "CaixaBank Tech",
+          "role": "Frontend Engineer / Squad Lead",
+          "period": "Dic 2023 – Actualidad",
+          "description": "Liderazgo de una squad frontend: arquitectura, planificación, mentoring y code review. Desarrollo con React, TypeScript y Material UI / OpenFront, en colaboración con backend y stakeholders."
+        },
+        {
+          "company": "Appdrawn Solutions",
+          "role": "Full Stack Developer / Product Owner",
+          "period": "Nov 2022 – Dic 2023",
+          "description": "Desarrollo y ownership de Airlinen, una plataforma de servicios para short lets. Implementación con Ruby on Rails y React, definición de requisitos y validación de funcionalidades con negocio."
+        },
+        {
+          "company": "SIGMA",
+          "role": "Application Developer",
+          "period": "Jun 2018 – Jun 2019",
+          "description": "Soporte y desarrollo de aplicaciones universitarias: análisis funcional, diagnóstico de errores, consultas SQL y resolución de incidencias con usuarios finales."
+        }
+      ]
     }
   },
   "Legal": {

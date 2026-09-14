@@ -54,6 +54,44 @@
         "eyebrow": "Pilates website",
         "description": "A calm, editorial website for Lidia Villanueva Bolívar, presenting personalised Pilates and mindful movement at every age."
       }
+    },
+    "viewResume": "View CV (PDF, Spanish)",
+    "resumePreviewAlt": "Preview of Javier López Villanueva’s CV",
+    "navAbout": "About me",
+    "about": {
+      "eyebrow": "About me",
+      "title": "Thoughtful technology.\nPurposeful products.",
+      "intro": "I’m Javier López Villanueva, a Senior Frontend Engineer / Squad Lead specializing in React, Next.js and TypeScript. I combine development, frontend architecture and team leadership to turn business needs into reliable, maintainable interfaces.",
+      "experience": "Experience",
+      "skills": "Core stack",
+      "education": "Education",
+      "languages": "Languages",
+      "educationItems": [
+        "Computer Engineering · Universitat Oberta de Catalunya · In progress",
+        "Web Application Development · Institut de Badia del Vallès",
+        "Microcomputer Systems and Networks · Institut de Badia del Vallès"
+      ],
+      "languageDetail": "Native Spanish and Catalan · Technical / professional English",
+      "jobs": [
+        {
+          "company": "CaixaBank Tech",
+          "role": "Frontend Engineer / Squad Lead",
+          "period": "Dec 2023 – Present",
+          "description": "Leading a frontend squad through architecture, planning, mentoring and code review. Building with React, TypeScript and Material UI / OpenFront alongside backend teams and stakeholders."
+        },
+        {
+          "company": "Appdrawn Solutions",
+          "role": "Full Stack Developer / Product Owner",
+          "period": "Nov 2022 – Dec 2023",
+          "description": "Development and ownership of Airlinen, a services platform for short lets. Built features with Ruby on Rails and React, defined requirements and validated functionality with the business."
+        },
+        {
+          "company": "SIGMA",
+          "role": "Application Developer",
+          "period": "Jun 2018 – Jun 2019",
+          "description": "Support and development for university applications: functional analysis, debugging, SQL queries and incident resolution with end users."
+        }
+      ]
     }
   },
   "Legal": {
