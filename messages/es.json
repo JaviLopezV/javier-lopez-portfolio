@@ -49,6 +49,10 @@
       "arrow": {
         "eyebrow": "Plantilla web",
         "description": "Una base corporativa multidioma, accesible y preparada para PWA, con páginas, navegación y contenido centralizados para adaptarla rápidamente a una nueva marca."
+      },
+      "lv": {
+        "eyebrow": "Web de Pilates",
+        "description": "Una web serena y editorial para Lidia Villanueva Bolívar, dedicada al Pilates personalizado y al movimiento consciente a cualquier edad."
       }
     }
   },

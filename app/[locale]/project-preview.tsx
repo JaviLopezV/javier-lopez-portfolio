@@ -3,6 +3,7 @@
 import { Stack, Typography } from "@jlopvil/mui-kit";
 import { Box } from "@mui/material";
 import { useTranslations } from "next-intl";
+import LvPreview from "./lv-preview";
 import {
   ArrowPreview,
   MuiKitPreview,
@@ -13,7 +14,7 @@ export default function ProjectPreview({
   type,
   tone,
 }: {
-  type: "cv" | "aj" | "pilates" | "muiKit" | "arrow";
+  type: "cv" | "aj" | "pilates" | "muiKit" | "arrow" | "lv";
   tone: string;
 }) {
   const t = useTranslations("Home");
@@ -150,6 +151,8 @@ export default function ProjectPreview({
         <PilatesPreview tone={tone} />
       ) : type === "arrow" ? (
         <ArrowPreview tone={tone} />
+      ) : type === "lv" ? (
+        <LvPreview tone={tone} />
       ) : (
         <MuiKitPreview tone={tone} />
       )}
