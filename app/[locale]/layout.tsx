@@ -30,12 +30,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t("title"),
     description: t("description"),
     alternates: {
-      languages: { es: "/es", en: "/en" },
+      languages: { es: "/es", ca: "/ca", en: "/en" },
     },
     openGraph: {
       title: t("openGraphTitle"),
       description: t("openGraphDescription"),
-      locale: locale === "es" ? "es_ES" : "en_US",
+      locale: locale === "es" ? "es_ES" : locale === "ca" ? "ca_ES" : "en_US",
       type: "website",
       images: [
         { url: "/og.png", width: 1200, height: 630, alt: t("imageAlt") },

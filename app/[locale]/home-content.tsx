@@ -249,7 +249,10 @@ function ProjectArticle({
 function ProjectsSection() {
   const t = useTranslations("Home");
   return (
-    <Box id="proyectos" sx={{ pt: 8, pb: 14 }}>
+    <Box
+      id="proyectos"
+      sx={{ pt: 8, pb: 14, scrollMarginTop: { xs: "104px", md: "88px" } }}
+    >
       <Stack
         direction="row"
         alignItems="baseline"

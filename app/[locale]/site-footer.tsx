@@ -24,11 +24,19 @@ export default function SiteFooter() {
             letterSpacing: "-.06em",
             lineHeight: 0.95,
             maxWidth: 900,
-            mb: 7,
+            mb: 3,
           }}
         >
           {t("footerTitle")}
         </Typography>
+        <Link
+          href="mailto:jlopvil@gmail.com"
+          color="inherit"
+          underline="always"
+          sx={{ display: "inline-block", fontSize: { xs: 20, md: 28 }, mb: 7 }}
+        >
+          jlopvil@gmail.com
+        </Link>
         <Stack
           direction={{ xs: "column", sm: "row" }}
           justifyContent="space-between"

@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { AboutContent } from "./about-content";
-import { Circle } from "@mui/icons-material";
 import { Container, Link, Stack, Typography } from "@jlopvil/mui-kit";
 import { Box, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Link as LocaleLink } from "../../i18n/navigation";
 import { HomeContent } from "./home-content";
 import SiteFooter from "./site-footer";
+import LanguageDropdown from "./language-dropdown";
 
 const theme = createTheme({
   palette: {
@@ -26,70 +26,166 @@ const theme = createTheme({
 
 function SiteHeader({ about }: { about: boolean }) {
   const t = useTranslations("Home");
-  const locale = useLocale();
   return (
-    <Box component="header" sx={{ borderBottom: "1px solid var(--line)" }}>
+    <Box
+      component="header"
+      sx={{
+        position: "sticky",
+        top: 0,
+        zIndex: 1100,
+        bgcolor: "rgba(243, 241, 233, .9)",
+        backdropFilter: "blur(18px)",
+        borderBottom: "1px solid var(--line)",
+      }}
+    >
       <Container maxWidth={false} sx={{ px: { xs: 2.5, md: 5, lg: 8 } }}>
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-          sx={{ minHeight: 78, py: 2, flexWrap: "wrap", gap: 2 }}
+        <Box
+          sx={{
+            minHeight: { xs: 104, md: 88 },
+            py: { xs: 1.5, md: 2 },
+            display: "grid",
+            gridTemplateColumns: { xs: "1fr auto", md: "1fr auto 1fr" },
+            alignItems: "center",
+            columnGap: { xs: 1.5, md: 3 },
+            rowGap: 1.5,
+          }}
         >
-          <Stack direction="row" alignItems="center" spacing={1.2}>
-            <Circle sx={{ fontSize: 12, color: "#a4c92c" }} />
-            <Typography sx={{ fontWeight: 800, letterSpacing: "-.03em" }}>
+          <Link
+            component={LocaleLink}
+            href="/"
+            underline="none"
+            sx={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 1.5,
+              width: "fit-content",
+              color: "var(--ink)",
+              "&:hover .brand-mark": { bgcolor: "#34372b" },
+            }}
+          >
+            <Box
+              className="brand-mark"
+              sx={{
+                display: "grid",
+                placeItems: "center",
+                width: 42,
+                height: 42,
+                bgcolor: "var(--ink)",
+                color: "var(--acid)",
+                borderRadius: "12px",
+                fontSize: 17,
+                fontWeight: 900,
+                letterSpacing: "-.08em",
+                transition: "background-color .2s ease",
+              }}
+            >
+              JL.
+            </Box>
+            <Typography
+              sx={{
+                fontWeight: 800,
+                letterSpacing: "-.04em",
+                fontSize: { xs: 15, sm: 17 },
+              }}
+            >
               Javier López
             </Typography>
-          </Stack>
-          <Stack direction="row" spacing={{ xs: 2, md: 4 }} alignItems="center">
+          </Link>
+
+          <Stack
+            component="nav"
+            aria-label={t("navigation")}
+            direction="row"
+            alignItems="center"
+            sx={{
+              gridColumn: { xs: "1 / -1", md: "2" },
+              gridRow: { xs: "2", md: "1" },
+              justifySelf: { xs: "stretch", md: "center" },
+              p: 0.5,
+              gap: 0.5,
+              border: "1px solid var(--line)",
+              borderRadius: "999px",
+              bgcolor: "rgba(255, 255, 255, .35)",
+            }}
+          >
             <Link
               href="#proyectos"
-              underline={about ? "none" : "always"}
+              underline="none"
               aria-current={!about ? "page" : undefined}
-              sx={{ fontSize: 14, fontWeight: 700 }}
+              sx={{
+                flex: { xs: 1, md: "none" },
+                textAlign: "center",
+                px: { xs: 2, md: 2.5 },
+                py: 0.9,
+                borderRadius: "999px",
+                fontSize: 13,
+                fontWeight: 700,
+                bgcolor: !about ? "var(--ink)" : "transparent",
+                color: !about ? "var(--paper)" : "var(--ink)",
+                transition: "background-color .2s ease, color .2s ease",
+                "&:hover": {
+                  bgcolor: !about ? "var(--ink)" : "rgba(25, 26, 22, .08)",
+                },
+              }}
             >
               {t("navProjects")}
             </Link>
             <Link
               href="#sobre-mi"
-              underline={about ? "always" : "none"}
+              underline="none"
               aria-current={about ? "page" : undefined}
-              sx={{ fontSize: 14, fontWeight: 700 }}
+              sx={{
+                flex: { xs: 1, md: "none" },
+                textAlign: "center",
+                px: { xs: 2, md: 2.5 },
+                py: 0.9,
+                borderRadius: "999px",
+                fontSize: 13,
+                fontWeight: 700,
+                bgcolor: about ? "var(--ink)" : "transparent",
+                color: about ? "var(--paper)" : "var(--ink)",
+                transition: "background-color .2s ease, color .2s ease",
+                "&:hover": {
+                  bgcolor: about ? "var(--ink)" : "rgba(25, 26, 22, .08)",
+                },
+              }}
             >
               {t("navAbout")}
             </Link>
+          </Stack>
+
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent="flex-end"
+            gap={{ md: 2, lg: 3 }}
+            sx={{ gridColumn: { xs: "2", md: "3" }, gridRow: "1" }}
+          >
             <Typography
               sx={{
-                display: { xs: "none", sm: "block" },
-                fontSize: 14,
+                display: { xs: "none", lg: "flex" },
+                alignItems: "center",
+                gap: 1,
+                whiteSpace: "nowrap",
+                fontSize: 12,
+                fontWeight: 600,
                 color: "text.secondary",
               }}
             >
+              <Box
+                component="span"
+                sx={{
+                  width: 7,
+                  height: 7,
+                  borderRadius: "50%",
+                  bgcolor: "#8eaf22",
+                }}
+              />
               {t("availability")}
             </Typography>
-            <Stack direction="row" spacing={1} aria-label="Language">
-              <Link
-                component={LocaleLink}
-                href={about ? "/#sobre-mi" : "/"}
-                locale="es"
-                underline={locale === "es" ? "always" : "hover"}
-                sx={{ fontSize: 13, fontWeight: 800 }}
-              >
-                {t("languageSpanish")}
-              </Link>
-              <Link
-                component={LocaleLink}
-                href={about ? "/#sobre-mi" : "/"}
-                locale="en"
-                underline={locale === "en" ? "always" : "hover"}
-                sx={{ fontSize: 13, fontWeight: 800 }}
-              >
-                {t("languageEnglish")}
-              </Link>
-            </Stack>
+            <LanguageDropdown about={about} />
           </Stack>
-        </Stack>
+        </Box>
       </Container>
     </Box>
   );

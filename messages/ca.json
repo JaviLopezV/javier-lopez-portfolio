@@ -1,0 +1,240 @@
+{
+  "Metadata": {
+    "title": "Javier López — Desenvolupament web",
+    "description": "Portafolis de Javier López. Productes digitals creats amb Next.js, TypeScript i Material UI.",
+    "openGraphTitle": "Javier López — Idees que viuen al web",
+    "openGraphDescription": "Productes digitals creats amb Next.js, TypeScript i Material UI.",
+    "imageAlt": "Portafolis de Javier López"
+  },
+  "Home": {
+    "navProjects": "Projectes",
+    "navigation": "Navegació principal",
+    "languageSelector": "Selecciona l’idioma",
+    "availability": "Disponible per a nous reptes",
+    "location": "Desenvolupament web · Castelló, Espanya",
+    "heroTitle": "Idees que viuen",
+    "heroEmphasis": "al web.",
+    "heroDescription": "Dissenyo i desenvolupo experiències digitals útils, ràpides i pensades per a persones reals.",
+    "viewWork": "Veure projectes destacats",
+    "selectedWork": "Projectes destacats",
+    "visitProject": "Visitar el projecte",
+    "openProject": "Obrir {title}",
+    "footerTitle": "Construïm alguna cosa que valgui la pena?",
+    "footerCopyright": "© 2026 Javier López Villanueva",
+    "footerStack": "Next.js · TypeScript · Material UI",
+    "legalNotice": "Avís legal",
+    "privacyPolicy": "Privacitat",
+    "cookiePolicy": "Galetes",
+    "languageSpanish": "ES",
+    "languageEnglish": "EN",
+    "cvName": "EL TEU NOM",
+    "cvProfile": "PERFIL PROFESSIONAL",
+    "fireHeadline": "Protecció contra incendis personalitzada i eficaç",
+    "fireCaption": "SEGURETAT · PREVENCIÓ",
+    "projects": {
+      "cv": {
+        "eyebrow": "Producte digital",
+        "description": "Un assistent bilingüe i privat per crear, personalitzar i exportar currículums professionals amb diferents plantilles, sense enviar les dades fora del navegador."
+      },
+      "aj": {
+        "eyebrow": "Web corporativa",
+        "description": "Plataforma multilingüe per a una empresa especialitzada en protecció contra incendis, manteniment i inspeccions de baixa tensió."
+      },
+      "pilates": {
+        "eyebrow": "Plataforma de gestió",
+        "description": "Aplicació multilingüe per gestionar classes de pilates, reserves, usuaris i continguts amb experiències diferenciades per a clients i administració."
+      },
+      "muiKit": {
+        "eyebrow": "Sistema de disseny",
+        "description": "Biblioteca pública de components React basada en Material UI, amb primitives accessibles, contractes TypeScript i una API compartida entre projectes."
+      },
+      "arrow": {
+        "eyebrow": "Plantilla web",
+        "description": "Una base corporativa multilingüe, accessible i preparada per a PWA, amb pàgines, navegació i contingut centralitzats per adaptar-la ràpidament a una nova marca."
+      },
+      "lv": {
+        "eyebrow": "Web de Pilates",
+        "description": "Un web serè i editorial per a Lidia Villanueva Bolívar, dedicat al Pilates personalitzat i al moviment conscient a qualsevol edat."
+      }
+    },
+    "viewResume": "Veure el CV (PDF)",
+    "resumePreviewAlt": "Vista prèvia del currículum de Javier López Villanueva",
+    "navAbout": "Sobre mi",
+    "about": {
+      "eyebrow": "Sobre mi",
+      "title": "Tecnologia amb criteri.\nProducte amb propòsit.",
+      "intro": "Soc Javier López Villanueva, Senior Frontend Engineer / Squad Lead especialitzat en React, Next.js i TypeScript. Combino desenvolupament, arquitectura frontend i lideratge d’equips per convertir necessitats de negoci en interfícies fiables i fàcils de mantenir.",
+      "experience": "Experiència",
+      "skills": "Tecnologies principals",
+      "education": "Formació",
+      "languages": "Idiomes",
+      "educationItems": [
+        "Enginyeria Informàtica · Universitat Oberta de Catalunya · En curs",
+        "Desenvolupament d’Aplicacions Web · Institut de Badia del Vallès",
+        "Sistemes Microinformàtics i Xarxes · Institut de Badia del Vallès"
+      ],
+      "languageDetail": "Castellà i català nadius · Anglès tècnic / professional",
+      "jobs": [
+        {
+          "company": "CaixaBank Tech",
+          "role": "Frontend Engineer / Squad Lead",
+          "period": "Des. 2023 – Actualitat",
+          "description": "Lideratge d’un equip frontend: arquitectura, planificació, mentoria i revisió de codi. Desenvolupament amb React, TypeScript i Material UI / OpenFront, en col·laboració amb backend i responsables de negoci."
+        },
+        {
+          "company": "Appdrawn Solutions",
+          "role": "Full Stack Developer / Product Owner",
+          "period": "Nov. 2022 – Des. 2023",
+          "description": "Desenvolupament i gestió d’Airlinen, una plataforma de serveis per a lloguers de curta durada. Implementació amb Ruby on Rails i React, definició de requisits i validació de funcionalitats amb negoci."
+        },
+        {
+          "company": "SIGMA",
+          "role": "Application Developer",
+          "period": "Juny 2018 – Juny 2019",
+          "description": "Suport i desenvolupament d’aplicacions universitàries: anàlisi funcional, diagnòstic d’errors, consultes SQL i resolució d’incidències amb usuaris finals."
+        }
+      ]
+    }
+  },
+  "Legal": {
+    "backHome": "Tornar a l’inici",
+    "lastUpdated": "Darrera actualització: 1 de setembre de 2026",
+    "documents": {
+      "legal": {
+        "title": "Avís legal",
+        "description": "Informació sobre el titular i les condicions d’ús d’aquest portafolis personal.",
+        "sections": [
+          {
+            "title": "Titular del lloc",
+            "paragraphs": [
+              "Aquest lloc web és un portafolis personal de Javier López Villanueva, persona física resident a Espanya.",
+              "Contacte: jlopvil@gmail.com.",
+              "El lloc té caràcter personal, informatiu i no comercial. No ofereix contractació, venda de productes ni prestació de serveis professionals a través del web."
+            ]
+          },
+          {
+            "title": "Objecte",
+            "paragraphs": [
+              "El lloc presenta projectes personals i treballs realitzats amb finalitats informatives. L’accés és gratuït i no requereix registre."
+            ]
+          },
+          {
+            "title": "Propietat intel·lectual",
+            "paragraphs": [
+              "Llevat que s’indiqui el contrari, els textos, el disseny i els elements originals d’aquest lloc pertanyen a Javier López Villanueva. No se n’autoritza la reproducció, distribució o transformació més enllà dels usos permesos per la llei.",
+              "Les marques, els noms i els continguts de tercers pertanyen als seus titulars respectius."
+            ]
+          },
+          {
+            "title": "Enllaços externs",
+            "paragraphs": [
+              "Els enllaços a projectes o llocs de tercers s’ofereixen com a referència. Javier López Villanueva no en controla els continguts, la disponibilitat ni les polítiques i no respon pels danys derivats del seu ús."
+            ]
+          },
+          {
+            "title": "Responsabilitat",
+            "paragraphs": [
+              "Es procura mantenir la informació correcta i disponible, però no es garanteix l’absència absoluta d’errors, interrupcions o elements perjudicials. L’usuari utilitza el lloc sota la seva pròpia responsabilitat."
+            ]
+          },
+          {
+            "title": "Legislació",
+            "paragraphs": [
+              "Aquest avís es regeix per la legislació espanyola. Qualsevol controvèrsia se sotmetrà als jutjats i tribunals que siguin competents d’acord amb la normativa aplicable."
+            ]
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Política de privacitat",
+        "description": "Com es tracten les dades personals en visitar aquest lloc.",
+        "sections": [
+          {
+            "title": "Responsable",
+            "paragraphs": [
+              "Responsable del tractament: Javier López Villanueva.",
+              "Contacte per a qüestions de privacitat i exercici de drets: jlopvil@gmail.com."
+            ]
+          },
+          {
+            "title": "Dades tractades",
+            "paragraphs": [
+              "El lloc no inclou formularis, comptes d’usuari, subscripcions, comentaris ni analítica publicitària. No se sol·liciten dades directament.",
+              "La infraestructura d’allotjament pot processar automàticament dades tècniques imprescindibles per servir i protegir el web, com ara l’adreça IP, la data i l’hora, l’URL sol·licitada, el navegador, el sistema operatiu, la referència i els registres de seguretat."
+            ]
+          },
+          {
+            "title": "Finalitat i base jurídica",
+            "paragraphs": [
+              "Les dades tècniques es tracten per lliurar el contingut, mantenir la seguretat, prevenir abusos i diagnosticar errors. La base jurídica és l’interès legítim a operar un lloc segur i funcional, aplicant la minimització de dades.",
+              "No es fan perfils, decisions automatitzades, publicitat basada en el comportament ni comunicacions comercials."
+            ]
+          },
+          {
+            "title": "Destinataris i transferències",
+            "paragraphs": [
+              "El lloc s’allotja a Vercel, que pot actuar com a proveïdor d’infraestructura i tractar registres tècnics. Els seus proveïdors poden estar situats fora de l’Espai Econòmic Europeu; quan escau, Vercel declara utilitzar mecanismes reconeguts de protecció, com ara clàusules contractuals tipus.",
+              "No es venen ni se cedeixen dades amb finalitats comercials."
+            ]
+          },
+          {
+            "title": "Conservació",
+            "paragraphs": [
+              "Els registres tècnics es conserven durant el temps necessari per a la seguretat, el funcionament i la resolució d’incidències, segons la configuració i els terminis del proveïdor d’allotjament. No es crea cap base de dades pròpia de visitants."
+            ]
+          },
+          {
+            "title": "Drets",
+            "paragraphs": [
+              "Pots sol·licitar l’accés, la rectificació, la supressió, l’oposició, la limitació o la portabilitat escrivint a jlopvil@gmail.com i indicant la teva sol·licitud. Es pot demanar informació raonable per verificar la identitat.",
+              "També pots presentar una reclamació davant l’Agència Espanyola de Protecció de Dades a www.aepd.es."
+            ]
+          },
+          {
+            "title": "Canvis",
+            "paragraphs": [
+              "Aquesta política s’actualitzarà si el lloc incorpora formularis, analítica, publicitat o altres tractaments. La data de la versió vigent apareix a l’inici."
+            ]
+          }
+        ]
+      },
+      "cookies": {
+        "title": "Política de galetes",
+        "description": "Informació sobre les galetes i tecnologies similars utilitzades per aquest lloc.",
+        "sections": [
+          {
+            "title": "Situació actual",
+            "paragraphs": [
+              "L’aplicació no instal·la galetes pròpies d’analítica, publicitat, seguiment ni personalització. L’idioma es determina mitjançant l’URL (/es, /ca o /en) i, en la primera visita, mitjançant la preferència d’idioma enviada pel navegador; no es desa en una galeta pròpia.",
+              "Per aquest motiu no es mostra cap bàner de consentiment: no s’utilitzen galetes no essencials que requereixin autorització prèvia."
+            ]
+          },
+          {
+            "title": "Infraestructura tècnica",
+            "paragraphs": [
+              "El proveïdor d’allotjament pot emprar mecanismes estrictament necessaris per a la seguretat, l’equilibri de càrrega o la protecció de desplegaments quan aquestes funcions estiguin actives. Aquestes tecnologies no s’utilitzen des d’aquesta aplicació per a analítica o publicitat."
+            ]
+          },
+          {
+            "title": "Serveis i enllaços de tercers",
+            "paragraphs": [
+              "En seguir un enllaç cap a un altre lloc, s’apliquen la política de galetes i les decisions d’aquell tercer. Aquest portafolis no controla les galetes que puguin instal·lar aquests llocs externs."
+            ]
+          },
+          {
+            "title": "Canvis futurs",
+            "paragraphs": [
+              "Abans d’incorporar analítica, publicitat o qualsevol galeta no essencial, s’actualitzarà aquesta política i s’implantarà un mecanisme de consentiment que permeti acceptar o rebutjar amb la mateixa facilitat."
+            ]
+          },
+          {
+            "title": "Contacte",
+            "paragraphs": [
+              "Per a consultes sobre aquesta política: jlopvil@gmail.com."
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

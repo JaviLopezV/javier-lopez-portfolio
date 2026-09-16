@@ -8,6 +8,8 @@
   },
   "Home": {
     "navProjects": "Proyectos",
+    "navigation": "Navegación principal",
+    "languageSelector": "Seleccionar idioma",
     "availability": "Disponible para nuevos retos",
     "location": "Desarrollo web · Castellón, España",
     "heroTitle": "Ideas que viven",
@@ -203,7 +205,7 @@
           {
             "title": "Situación actual",
             "paragraphs": [
-              "La aplicación no instala cookies propias de analítica, publicidad, seguimiento ni personalización. El idioma se determina mediante la URL (/es o /en) y, en la primera visita, mediante la preferencia de idioma enviada por el navegador; no se guarda en una cookie propia.",
+              "La aplicación no instala cookies propias de analítica, publicidad, seguimiento ni personalización. El idioma se determina mediante la URL (/es, /ca o /en) y, en la primera visita, mediante la preferencia de idioma enviada por el navegador; no se guarda en una cookie propia.",
               "Por este motivo no se muestra un banner de consentimiento: no se utilizan cookies no esenciales que requieran autorización previa."
             ]
           },

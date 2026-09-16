@@ -8,6 +8,8 @@
   },
   "Home": {
     "navProjects": "Projects",
+    "navigation": "Main navigation",
+    "languageSelector": "Select language",
     "availability": "Available for new opportunities",
     "location": "Web development · Castellón, Spain",
     "heroTitle": "Ideas that live",
@@ -203,7 +205,7 @@
           {
             "title": "Current status",
             "paragraphs": [
-              "The application does not set first-party analytics, advertising, tracking or personalisation cookies. Language is determined through the URL (/es or /en) and, on the first visit, the browser's language preference; it is not stored in an application cookie.",
+              "The application does not set first-party analytics, advertising, tracking or personalisation cookies. Language is determined through the URL (/es, /ca or /en) and, on the first visit, the browser's language preference; it is not stored in an application cookie.",
               "No consent banner is displayed because the site does not use non-essential cookies requiring prior authorization."
             ]
           },
@@ -227,7 +229,9 @@
           },
           {
             "title": "Contact",
-            "paragraphs": ["Questions about this policy: jlopvil@gmail.com."]
+            "paragraphs": [
+              "Questions about this policy: jlopvil@gmail.com."
+            ]
           }
         ]
       }
