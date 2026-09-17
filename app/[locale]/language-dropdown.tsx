@@ -6,10 +6,18 @@ import { Box, Button, Menu, MenuItem } from "@mui/material";
 import { useLocale, useTranslations } from "next-intl";
 import { Link as LocaleLink } from "../../i18n/navigation";
 
-export default function LanguageDropdown({ about }: { about: boolean }) {
+export default function LanguageDropdown({
+  about,
+  canViewAbout,
+}: {
+  about: boolean;
+  canViewAbout: boolean;
+}) {
   const t = useTranslations("Home");
   const locale = useLocale();
-  const sectionHref = about ? "/#sobre-mi" : "/";
+  const sectionHref = canViewAbout
+    ? about ? "/?about=1" : "/?about=1&view=projects#proyectos"
+    : "/";
   const [languageMenu, setLanguageMenu] = useState<null | HTMLElement>(null);
   const languages = [
     { locale: "es", label: "Español", short: "ES" },

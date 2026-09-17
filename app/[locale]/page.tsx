@@ -24,8 +24,21 @@ const theme = createTheme({
   },
 });
 
-function SiteHeader({ about }: { about: boolean }) {
+function SiteHeader({
+  about,
+  canViewAbout,
+  onShowProjects,
+  onShowAbout,
+}: {
+  about: boolean;
+  canViewAbout: boolean;
+  onShowProjects: () => void;
+  onShowAbout: () => void;
+}) {
   const t = useTranslations("Home");
+  const projectsHref = canViewAbout
+    ? "/?about=1&view=projects#proyectos"
+    : "/#proyectos";
   return (
     <Box
       component="header"
@@ -52,8 +65,9 @@ function SiteHeader({ about }: { about: boolean }) {
         >
           <Link
             component={LocaleLink}
-            href="/"
+            href={canViewAbout ? "/?about=1&view=projects" : "/"}
             underline="none"
+            onClick={onShowProjects}
             sx={{
               display: "inline-flex",
               alignItems: "center",
@@ -109,9 +123,11 @@ function SiteHeader({ about }: { about: boolean }) {
             }}
           >
             <Link
-              href="#proyectos"
+              component={LocaleLink}
+              href={projectsHref}
               underline="none"
               aria-current={!about ? "page" : undefined}
+              onClick={onShowProjects}
               sx={{
                 flex: { xs: 1, md: "none" },
                 textAlign: "center",
@@ -130,28 +146,29 @@ function SiteHeader({ about }: { about: boolean }) {
             >
               {t("navProjects")}
             </Link>
-            <Link
-              href="#sobre-mi"
-              underline="none"
-              aria-current={about ? "page" : undefined}
-              sx={{
-                flex: { xs: 1, md: "none" },
-                textAlign: "center",
-                px: { xs: 2, md: 2.5 },
-                py: 0.9,
-                borderRadius: "999px",
-                fontSize: 13,
-                fontWeight: 700,
-                bgcolor: about ? "var(--ink)" : "transparent",
-                color: about ? "var(--paper)" : "var(--ink)",
-                transition: "background-color .2s ease, color .2s ease",
-                "&:hover": {
-                  bgcolor: about ? "var(--ink)" : "rgba(25, 26, 22, .08)",
-                },
-              }}
-            >
-              {t("navAbout")}
-            </Link>
+            {canViewAbout && (
+              <Link
+                component={LocaleLink}
+                href="/?about=1"
+                underline="none"
+                aria-current={about ? "page" : undefined}
+                onClick={onShowAbout}
+                sx={{
+                  flex: { xs: 1, md: "none" },
+                  textAlign: "center",
+                  px: { xs: 2, md: 2.5 },
+                  py: 0.9,
+                  borderRadius: "999px",
+                  fontSize: 13,
+                  fontWeight: 700,
+                  bgcolor: about ? "var(--ink)" : "transparent",
+                  color: about ? "var(--paper)" : "var(--ink)",
+                  "&:hover": { bgcolor: about ? "var(--ink)" : "rgba(25, 26, 22, .08)" },
+                }}
+              >
+                {t("navAbout")}
+              </Link>
+            )}
           </Stack>
 
           <Stack
@@ -183,7 +200,7 @@ function SiteHeader({ about }: { about: boolean }) {
               />
               {t("availability")}
             </Typography>
-            <LanguageDropdown about={about} />
+            <LanguageDropdown about={about} canViewAbout={canViewAbout} />
           </Stack>
         </Box>
       </Container>
@@ -192,29 +209,39 @@ function SiteHeader({ about }: { about: boolean }) {
 }
 
 export default function Home() {
-  const [about, setAbout] = useState(false);
+  const [view, setView] = useState({ canViewAbout: false, about: false });
   useEffect(() => {
     const syncSection = () => {
-      const isAbout = window.location.hash === "#sobre-mi";
-      setAbout(isAbout);
-      if (isAbout) window.scrollTo(0, 0);
+      const params = new URLSearchParams(window.location.search);
+      const canViewAbout = params.get("about") === "1";
+      const about = canViewAbout && params.get("view") !== "projects";
+      setView({ canViewAbout, about });
+      if (about) window.scrollTo(0, 0);
     };
     syncSection();
-    window.addEventListener("hashchange", syncSection);
-    return () => window.removeEventListener("hashchange", syncSection);
+    window.addEventListener("popstate", syncSection);
+    return () => window.removeEventListener("popstate", syncSection);
   }, []);
   useEffect(() => {
-    if (!about && window.location.hash === "#proyectos") {
+    if (!view.about && window.location.hash === "#proyectos") {
       document.getElementById("proyectos")?.scrollIntoView();
     }
-  }, [about]);
+  }, [view.about]);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <SiteHeader about={about} />
+      <SiteHeader
+        about={view.about}
+        canViewAbout={view.canViewAbout}
+        onShowProjects={() => setView((current) => ({ ...current, about: false }))}
+        onShowAbout={() => {
+          setView((current) => ({ ...current, about: true }));
+          window.scrollTo(0, 0);
+        }}
+      />
       <Box component="main">
         <Container maxWidth={false} sx={{ px: { xs: 2.5, md: 5, lg: 8 } }}>
-          {about ? <AboutContent /> : <HomeContent />}
+          {view.about ? <AboutContent /> : <HomeContent />}
         </Container>
       </Box>
       <SiteFooter />
