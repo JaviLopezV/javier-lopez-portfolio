@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ArrowOutward } from "@mui/icons-material";
 import { Link, Stack, Typography } from "@jlopvil/mui-kit";
 import { Box, Button, Chip } from "@mui/material";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 type Job = {
   company: string;
@@ -15,6 +15,13 @@ type Job = {
 
 export function AboutContent() {
   const t = useTranslations("Home");
+  const locale = useLocale();
+  const resumePdf =
+    locale === "en" ? "/javier-lopez-cv-en.pdf" : "/javier-lopez-cv.pdf";
+  const resumePreview =
+    locale === "en"
+      ? "/javier-lopez-cv-en-preview.png"
+      : "/javier-lopez-cv-preview.png";
   const jobs = t.raw("about.jobs") as Job[];
   const education = t.raw("about.educationItems") as string[];
   return (
@@ -105,7 +112,7 @@ export function AboutContent() {
         <Stack spacing={5}>
           <Box>
             <Link
-              href="/javier-lopez-cv.pdf"
+              href={resumePdf}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={t("viewResume")}
@@ -117,7 +124,7 @@ export function AboutContent() {
               }}
             >
               <Image
-                src="/javier-lopez-cv-preview.png"
+                src={resumePreview}
                 alt={t("resumePreviewAlt")}
                 width={848}
                 height={1200}
@@ -126,7 +133,7 @@ export function AboutContent() {
               />
             </Link>
             <Button
-              href="/javier-lopez-cv.pdf"
+              href={resumePdf}
               target="_blank"
               rel="noopener noreferrer"
               endIcon={<ArrowOutward />}
