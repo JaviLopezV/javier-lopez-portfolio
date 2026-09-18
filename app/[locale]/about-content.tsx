@@ -56,6 +56,15 @@ export function AboutContent() {
           <Typography sx={{ fontSize: { xs: 19, md: 23 }, lineHeight: 1.6 }}>
             {t("about.intro")}
           </Typography>
+          <Typography
+            sx={{
+              fontSize: { xs: 17, md: 19 },
+              lineHeight: 1.65,
+              color: "text.secondary",
+            }}
+          >
+            {t("about.independentWork")}
+          </Typography>
           <Box component="section">
             <Typography
               component="h2"

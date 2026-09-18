@@ -63,7 +63,8 @@
     "about": {
       "eyebrow": "Sobre mí",
       "title": "Tecnología con criterio.\nProducto con propósito.",
-      "intro": "Soy Javier López Villanueva, Senior Frontend Engineer / Squad Lead especializado en React, Next.js y TypeScript. Combino desarrollo, arquitectura frontend y liderazgo de equipo para convertir necesidades de negocio en interfaces fiables y mantenibles.",
+      "intro": "Soy Javier López Villanueva, Senior Frontend Engineer / Squad Lead especializado en React, Next.js y TypeScript. Combino desarrollo práctico, arquitectura frontend y liderazgo de equipo para transformar necesidades de negocio en interfaces fiables y mantenibles.",
+      "independentWork": "Además del trabajo en producto, desarrollo plataformas multidioma, herramientas privadas y una librería pública de componentes React. Entre mis proyectos están Next CV Builder, Personal & Pilates, Mantenimientos AJ, Template Web Arrow y la web de Lidia Villanueva Bolívar, con atención a la accesibilidad, la experiencia de usuario y la calidad del código.",
       "experience": "Experiencia",
       "skills": "Stack principal",
       "education": "Formación",
@@ -79,13 +80,13 @@
           "company": "CaixaBank Tech",
           "role": "Frontend Engineer / Squad Lead",
           "period": "Dic 2023 – Actualidad",
-          "description": "Liderazgo de una squad frontend: arquitectura, planificación, mentoring y code review. Desarrollo con React, TypeScript y Material UI / OpenFront, en colaboración con backend y stakeholders."
+          "description": "Lidero un equipo frontend en aplicaciones corporativas y sigo participando en la implementación. Trabajo con React, TypeScript y Material UI / OpenFront; coordino arquitectura, planificación, mentoring y code review junto a backend y stakeholders."
         },
         {
           "company": "Appdrawn Solutions",
           "role": "Full Stack Developer / Product Owner",
           "period": "Nov 2022 – Dic 2023",
-          "description": "Desarrollo y ownership de Airlinen, una plataforma de servicios para short lets. Implementación con Ruby on Rails y React, definición de requisitos y validación de funcionalidades con negocio."
+          "description": "Desarrollé y asumí el ownership de Airlinen, una plataforma de servicios para alquileres de corta estancia, de extremo a extremo: backend, frontend, flujos y operación. Implementé funcionalidades con Ruby on Rails y React, y definí y validé requisitos con negocio."
         },
         {
           "company": "SIGMA",

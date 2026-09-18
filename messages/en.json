@@ -63,7 +63,8 @@
     "about": {
       "eyebrow": "About me",
       "title": "Thoughtful technology.\nPurposeful products.",
-      "intro": "I’m Javier López Villanueva, a Senior Frontend Engineer / Squad Lead specializing in React, Next.js and TypeScript. I combine development, frontend architecture and team leadership to turn business needs into reliable, maintainable interfaces.",
+      "intro": "I’m Javier López Villanueva, a Senior Frontend Engineer / Squad Lead specialising in React, Next.js and TypeScript. I combine hands-on development, frontend architecture and team leadership to turn business needs into reliable, maintainable interfaces.",
+      "independentWork": "Alongside product work, I build multilingual platforms, privacy-conscious tools and a public React component library. My projects include Next CV Builder, Personal & Pilates, Mantenimientos AJ, Template Web Arrow and Lidia Villanueva Bolívar’s website, with a focus on accessibility, user experience and code quality.",
       "experience": "Experience",
       "skills": "Core stack",
       "education": "Education",
@@ -79,13 +80,13 @@
           "company": "CaixaBank Tech",
           "role": "Frontend Engineer / Squad Lead",
           "period": "Dec 2023 – Present",
-          "description": "Leading a frontend squad through architecture, planning, mentoring and code review. Building with React, TypeScript and Material UI / OpenFront alongside backend teams and stakeholders."
+          "description": "I lead a frontend team working on corporate applications while remaining hands-on. I build with React, TypeScript and Material UI / OpenFront, and coordinate architecture, planning, mentoring and code review with backend teams and stakeholders."
         },
         {
           "company": "Appdrawn Solutions",
           "role": "Full Stack Developer / Product Owner",
           "period": "Nov 2022 – Dec 2023",
-          "description": "Development and ownership of Airlinen, a services platform for short lets. Built features with Ruby on Rails and React, defined requirements and validated functionality with the business."
+          "description": "I developed and owned Airlinen, a services platform for short-term lets, end to end across backend, frontend, user flows and operations. I delivered features with Ruby on Rails and React, and defined and validated requirements with business stakeholders."
         },
         {
           "company": "SIGMA",
@@ -229,9 +230,7 @@
           },
           {
             "title": "Contact",
-            "paragraphs": [
-              "Questions about this policy: jlopvil@gmail.com."
-            ]
+            "paragraphs": ["Questions about this policy: jlopvil@gmail.com."]
           }
         ]
       }

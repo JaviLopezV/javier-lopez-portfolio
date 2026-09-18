@@ -57,13 +57,14 @@
         "description": "Un web serè i editorial per a Lidia Villanueva Bolívar, dedicat al Pilates personalitzat i al moviment conscient a qualsevol edat."
       }
     },
-    "viewResume": "Veure el CV (PDF)",
+    "viewResume": "Veure el CV (PDF, en castellà)",
     "resumePreviewAlt": "Vista prèvia del currículum de Javier López Villanueva",
     "navAbout": "Sobre mi",
     "about": {
       "eyebrow": "Sobre mi",
       "title": "Tecnologia amb criteri.\nProducte amb propòsit.",
-      "intro": "Soc Javier López Villanueva, Senior Frontend Engineer / Squad Lead especialitzat en React, Next.js i TypeScript. Combino desenvolupament, arquitectura frontend i lideratge d’equips per convertir necessitats de negoci en interfícies fiables i fàcils de mantenir.",
+      "intro": "Soc Javier López Villanueva, Senior Frontend Engineer / Squad Lead especialitzat en React, Next.js i TypeScript. Combino desenvolupament pràctic, arquitectura frontend i lideratge d’equips per convertir necessitats de negoci en interfícies fiables i fàcils de mantenir.",
+      "independentWork": "A més de la feina en producte, desenvolupo plataformes multilingües, eines privades i una biblioteca pública de components React. Entre els meus projectes hi ha Next CV Builder, Personal & Pilates, Mantenimientos AJ, Template Web Arrow i el web de Lidia Villanueva Bolívar, amb atenció a l’accessibilitat, l’experiència d’usuari i la qualitat del codi.",
       "experience": "Experiència",
       "skills": "Tecnologies principals",
       "education": "Formació",
@@ -79,13 +80,13 @@
           "company": "CaixaBank Tech",
           "role": "Frontend Engineer / Squad Lead",
           "period": "Des. 2023 – Actualitat",
-          "description": "Lideratge d’un equip frontend: arquitectura, planificació, mentoria i revisió de codi. Desenvolupament amb React, TypeScript i Material UI / OpenFront, en col·laboració amb backend i responsables de negoci."
+          "description": "Lidero un equip frontend en aplicacions corporatives i continuo participant en la implementació. Treballo amb React, TypeScript i Material UI / OpenFront, i coordino arquitectura, planificació, mentoria i revisió de codi amb els equips de backend i els responsables de negoci."
         },
         {
           "company": "Appdrawn Solutions",
           "role": "Full Stack Developer / Product Owner",
           "period": "Nov. 2022 – Des. 2023",
-          "description": "Desenvolupament i gestió d’Airlinen, una plataforma de serveis per a lloguers de curta durada. Implementació amb Ruby on Rails i React, definició de requisits i validació de funcionalitats amb negoci."
+          "description": "Vaig desenvolupar i assumir la responsabilitat d’Airlinen, una plataforma de serveis per a lloguers de curta durada, de cap a cap: backend, frontend, fluxos i operativa. Vaig implementar funcionalitats amb Ruby on Rails i React, i vaig definir i validar requisits amb negoci."
         },
         {
           "company": "SIGMA",
