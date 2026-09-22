@@ -10,11 +10,79 @@ import {
   PilatesPreview,
 } from "./project-preview-cards";
 
+function LearnSantaPreview({
+  type,
+  tone,
+}: {
+  type: "learn" | "santa";
+  tone: string;
+}) {
+  const t = useTranslations("Home");
+  const isLearn = type === "learn";
+
+  return (
+    <Box
+      sx={{
+        mt: 2,
+        borderRadius: 3,
+        height: "calc(100% - 50px)",
+        bgcolor: isLearn ? "#eeeaff" : "#fff0ed",
+        p: 2.5,
+        color: tone,
+      }}
+    >
+      <Typography sx={{ fontSize: 11, fontWeight: 800, letterSpacing: 1.5 }}>
+        {isLearn ? "ARROW / LEARN GAMES" : "ARROW / SECRET SANTA"}
+      </Typography>
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+        sx={{ my: 2 }}
+      >
+        <Typography
+          sx={{
+            fontSize: 25,
+            fontWeight: 900,
+            letterSpacing: "-.05em",
+            maxWidth: 190,
+            lineHeight: 1.1,
+          }}
+        >
+          {t(`projects.${type}.eyebrow`)}
+        </Typography>
+        <Typography aria-hidden="true" sx={{ fontSize: 46 }}>
+          {isLearn ? "✦" : "🎁"}
+        </Typography>
+      </Stack>
+      <Stack direction="row" gap={1}>
+        {(isLearn ? ["Aa", "↔", "✓"] : ["①", "②", "✉"]).map((label) => (
+          <Box
+            key={label}
+            sx={{
+              flex: 1,
+              bgcolor: "white",
+              borderRadius: 2,
+              p: 1.5,
+              textAlign: "center",
+              fontSize: 24,
+              fontWeight: 800,
+              boxShadow: `0 4px 0 ${tone}20`,
+            }}
+          >
+            {label}
+          </Box>
+        ))}
+      </Stack>
+    </Box>
+  );
+}
+
 export default function ProjectPreview({
   type,
   tone,
 }: {
-  type: "cv" | "aj" | "pilates" | "muiKit" | "arrow" | "lv";
+  type: "cv" | "aj" | "pilates" | "muiKit" | "arrow" | "lv" | "learn" | "santa";
   tone: string;
 }) {
   const t = useTranslations("Home");
@@ -22,7 +90,7 @@ export default function ProjectPreview({
     <Box
       sx={{
         bgcolor: "#fff",
-        height: { xs: 270, md: 370 },
+        height: { xs: 250, md: 290 },
         p: { xs: 2, md: 3 },
         position: "relative",
         overflow: "hidden",
@@ -48,7 +116,9 @@ export default function ProjectPreview({
           ))}
         </Stack>
       </Stack>
-      {type === "cv" ? (
+      {type === "learn" || type === "santa" ? (
+        <LearnSantaPreview type={type} tone={tone} />
+      ) : type === "cv" ? (
         <Stack direction="row" spacing={2.5} sx={{ pt: 3, height: "100%" }}>
           <Box sx={{ width: "34%", bgcolor: "#f5edf3", p: 2 }}>
             <Box

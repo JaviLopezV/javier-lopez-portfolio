@@ -55,6 +55,14 @@
       "lv": {
         "eyebrow": "Web de Pilates",
         "description": "Una web serena y editorial para Lidia Villanueva Bolívar, dedicada al Pilates personalizado y al movimiento consciente a cualquier edad."
+      },
+      "learn": {
+        "eyebrow": "Aprender jugando",
+        "description": "Vocabulario, gramática y expresiones en seis idiomas a través de juegos de traducción, escritura y parejas."
+      },
+      "santa": {
+        "eyebrow": "Amigo invisible",
+        "description": "Organiza un amigo invisible con presupuesto, fecha y exclusiones. Cada participante recibe su asignación de forma privada por email."
       }
     },
     "viewResume": "Ver CV (PDF)",
@@ -95,6 +103,17 @@
           "description": "Soporte y desarrollo de aplicaciones universitarias: análisis funcional, diagnóstico de errores, consultas SQL y resolución de incidencias con usuarios finales."
         }
       ]
+    },
+    "projectCount": "proyectos para explorar",
+    "madeForPeople": "Hecho para personas",
+    "workIntro": "Ideas distintas. La misma atención al detalle.",
+    "filterLabel": "Filtrar proyectos",
+    "resultCount": "{count} proyectos",
+    "filters": {
+      "all": "Todos",
+      "apps": "Aplicaciones",
+      "web": "Webs",
+      "tools": "Herramientas"
     }
   },
   "Legal": {

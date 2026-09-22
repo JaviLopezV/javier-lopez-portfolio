@@ -1,15 +1,37 @@
 "use client";
 
+import { useState } from "react";
 import { ArrowOutward, NorthEast } from "@mui/icons-material";
 import { Button, Link, Stack, Typography } from "@jlopvil/mui-kit";
-import { Box, Chip } from "@mui/material";
+import { Chip } from "@mui/material";
 import { useTranslations } from "next-intl";
 import ProjectPreview from "./project-preview";
 
 const projects = [
   {
-    id: "cv",
+    id: "learn",
     number: "01",
+    title: "Arrow Learn Games",
+    url: "https://arrow-learn-games.vercel.app/",
+    tags: ["Next.js", "TypeScript", "i18n"],
+    tone: "#6554c0",
+    preview: "learn",
+    category: "apps",
+  },
+  {
+    id: "santa",
+    number: "02",
+    title: "Arrow Secret Santa",
+    url: "https://arrow-secret-santa.vercel.app/",
+    tags: ["Next.js", "Redis", "Email"],
+    tone: "#b84350",
+    preview: "santa",
+    category: "apps",
+  },
+  {
+    id: "cv",
+    category: "apps",
+    number: "03",
     title: "Next CV Builder",
     url: "https://arrow-cv-builder.vercel.app/",
     tags: ["Next.js", "i18n", "Local-first"],
@@ -18,7 +40,8 @@ const projects = [
   },
   {
     id: "aj",
-    number: "02",
+    category: "web",
+    number: "04",
     title: "Mantenimientos AJ",
     url: "https://mantenimientos-aj.vercel.app/es",
     tags: ["Next.js", "i18n", "SEO"],
@@ -27,7 +50,8 @@ const projects = [
   },
   {
     id: "pilates",
-    number: "03",
+    category: "apps",
+    number: "05",
     title: "Personal & Pilates",
     url: "https://personal-and-pilates.vercel.app/",
     tags: ["Next.js", "Prisma", "Bookings"],
@@ -36,7 +60,8 @@ const projects = [
   },
   {
     id: "arrow",
-    number: "04",
+    category: "tools",
+    number: "06",
     title: "Template Web Arrow",
     url: "https://arrow-template-web.vercel.app/",
     tags: ["Next.js", "i18n", "PWA"],
@@ -45,7 +70,8 @@ const projects = [
   },
   {
     id: "lv",
-    number: "05",
+    category: "web",
+    number: "07",
     title: "Lidia Villanueva Bolivar",
     url: "https://lidia-villanueva-bolivar.vercel.app",
     tags: ["Next.js", "i18n", "PWA"],
@@ -54,7 +80,8 @@ const projects = [
   },
   {
     id: "muiKit",
-    number: "06",
+    category: "tools",
+    number: "08",
     title: "MUI Component Library",
     url: "https://www.npmjs.com/package/@jlopvil/mui-kit",
     tags: ["React", "TypeScript", "Material UI"],
@@ -66,74 +93,51 @@ const projects = [
 function HeroSection() {
   const t = useTranslations("Home");
   return (
-    <Box
-      sx={{
-        minHeight: { xs: 620, md: 690 },
-        display: "grid",
-        alignContent: "center",
-        py: 8,
-      }}
-    >
-      <Typography
-        sx={{
-          fontSize: 12,
-          fontWeight: 800,
-          letterSpacing: ".18em",
-          textTransform: "uppercase",
-          mb: 3,
-        }}
-      >
-        {t("location")}
-      </Typography>
-      <Typography
-        component="h1"
-        sx={{
-          maxWidth: 1150,
-          fontSize: { xs: "16vw", sm: 76, md: 112, lg: 136 },
-          fontWeight: 900,
-          letterSpacing: "-.075em",
-          lineHeight: 0.83,
-          mb: 5,
-          animation: "rise .7s ease both",
-        }}
-      >
-        {t("heroTitle")}{" "}
-        <Box component="span" sx={{ color: "text.secondary", fontWeight: 400 }}>
-          {t("heroEmphasis")}
-        </Box>
-      </Typography>
-      <Stack
-        direction={{ xs: "column", md: "row" }}
-        justifyContent="space-between"
-        alignItems={{ xs: "flex-start", md: "flex-end" }}
-        gap={4}
-      >
-        <Typography
-          sx={{ maxWidth: 530, fontSize: { xs: 19, md: 24 }, lineHeight: 1.45 }}
-        >
-          {t("heroDescription")}
-        </Typography>
+    <section className="portfolio-hero">
+      <div className="hero-copy">
+        <div className="hero-eyebrow">
+          <span className="status-dot" />
+          {t("location")}
+        </div>
+        <h1>
+          {t("heroTitle")} <span>{t("heroEmphasis")}</span>
+        </h1>
+        <p className="hero-description">{t("heroDescription")}</p>
         <Button
           href="#proyectos"
           endIcon={<ArrowOutward />}
           sx={{
             bgcolor: "var(--acid)",
             color: "var(--ink)",
+            borderRadius: 99,
             px: 3,
-            py: 1.5,
-            border: "1px solid var(--ink)",
-            boxShadow: "5px 5px 0 var(--ink)",
-            "&:hover": {
-              bgcolor: "#c9f236",
-              transform: "translate(2px, 2px)",
-              boxShadow: "3px 3px 0 var(--ink)",
-            },
+            py: 1.75,
+            fontSize: 15,
+            "&:hover": { bgcolor: "#c9f236", transform: "translateY(-3px)" },
           }}
         >
           {t("viewWork")}
         </Button>
-      </Stack>
-    </Box>
+        <div className="hero-meta">
+          <span>08 {t("projectCount")}</span>
+          <span>React / Next.js / TypeScript</span>
+        </div>
+      </div>
+      <div className="hero-art" aria-hidden="true">
+        <div className="art-grid" />
+        <span className="art-label">IDEA → CODE → LIVE</span>
+        <div className="orbit orbit-one" />
+        <div className="orbit orbit-two" />
+        <div className="art-symbol">↗</div>
+        <div className="floating-label label-top">
+          &lt;build /&gt;<span>●</span>
+        </div>
+        <div className="floating-label label-bottom">
+          <span>✦</span> {t("madeForPeople")}
+        </div>
+        <span className="art-caption">JL. / DIGITAL PLAYGROUND</span>
+      </div>
+    </section>
   );
 }
 
@@ -146,145 +150,133 @@ function ProjectArticle({
 }) {
   const t = useTranslations("Home");
   return (
-    <Box
-      component="article"
-      sx={{
-        display: "grid",
-        gridTemplateColumns: {
-          xs: "1fr",
-          md: index % 2 ? "1.05fr .95fr" : ".95fr 1.05fr",
-        },
-        gap: { xs: 3, md: 6 },
-        alignItems: "center",
-      }}
+    <article
+      className="project-card"
+      style={
+        {
+          "--project-tone": project.tone,
+          animationDelay: `${index * 45}ms`,
+        } as React.CSSProperties
+      }
     >
-      <Box sx={{ order: { xs: 1, md: index % 2 ? 2 : 1 } }}>
-        <Stack direction="row" justifyContent="space-between" sx={{ mb: 5 }}>
-          <Typography sx={{ fontFamily: "monospace", color: "text.secondary" }}>
-            {project.number}
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: 12,
-              textTransform: "uppercase",
-              letterSpacing: ".13em",
-              fontWeight: 700,
-            }}
-          >
-            {t(`projects.${project.id}.eyebrow`)}
-          </Typography>
-        </Stack>
-        <Typography
-          component="h3"
-          sx={{
-            fontSize: { xs: 42, md: 64 },
-            fontWeight: 850,
-            letterSpacing: "-.06em",
-            lineHeight: 0.95,
-            mb: 3,
-          }}
-        >
-          {project.title}
-        </Typography>
-        <Typography
-          sx={{
-            color: "text.secondary",
-            fontSize: { xs: 17, md: 19 },
-            lineHeight: 1.55,
-            maxWidth: 560,
-            mb: 4,
-          }}
-        >
-          {t(`projects.${project.id}.description`)}
-        </Typography>
-        <Stack direction="row" flexWrap="wrap" gap={1} sx={{ mb: 4 }}>
-          {project.tags.map((tag) => (
-            <Chip
-              key={tag}
-              label={tag}
-              variant="outlined"
-              size="small"
-              sx={{ borderRadius: 10, fontWeight: 700 }}
-            />
-          ))}
-        </Stack>
-        <Link
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          underline="none"
-          sx={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 1,
-            fontWeight: 800,
-            borderBottom: "2px solid",
-            pb: 0.5,
-          }}
-        >
-          {t("visitProject")} <NorthEast fontSize="small" />
-        </Link>
-      </Box>
       <Link
+        underline="none"
+        className="project-image"
         href={project.url}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t("openProject", { title: project.title })}
-        sx={{
-          display: "block",
-          order: { xs: 2, md: index % 2 ? 1 : 2 },
-          border: "1px solid var(--ink)",
-          p: 1.25,
-          bgcolor: "var(--ink)",
-          transition: "transform .25s ease",
-          "&:hover": { transform: "rotate(-1deg) scale(1.01)" },
-        }}
       >
         <ProjectPreview type={project.preview} tone={project.tone} />
+        <span className="project-open">
+          <NorthEast fontSize="small" />
+        </span>
       </Link>
-    </Box>
+      <div className="project-body">
+        <div className="project-eyebrow">
+          <span>{t(`projects.${project.id}.eyebrow`)}</span>
+          <span>{project.number} / 08</span>
+        </div>
+        <Typography
+          component="h3"
+          sx={{
+            fontSize: { xs: 29, md: 34 },
+            fontWeight: 800,
+            letterSpacing: "-.055em",
+            lineHeight: 1.08,
+          }}
+        >
+          {project.title}
+        </Typography>
+        <p>{t(`projects.${project.id}.description`)}</p>
+        <Stack
+          direction="row"
+          flexWrap="wrap"
+          gap={0.75}
+          sx={{ mt: "auto", mb: 2 }}
+        >
+          {project.tags.map((tag) => (
+            <Chip
+              key={tag}
+              label={tag}
+              size="small"
+              sx={{ bgcolor: "#f0f0eb", fontSize: 11, fontWeight: 700 }}
+            />
+          ))}
+        </Stack>
+        <Link
+          className="project-visit"
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          underline="none"
+        >
+          {t("visitProject")}
+          <NorthEast fontSize="small" />
+        </Link>
+      </div>
+    </article>
   );
 }
 
 function ProjectsSection() {
   const t = useTranslations("Home");
+  const [filter, setFilter] = useState("all");
+  const visibleProjects = projects.filter(
+    (project) => filter === "all" || project.category === filter,
+  );
   return (
-    <Box
-      id="proyectos"
-      sx={{ pt: 8, pb: 14, scrollMarginTop: { xs: "104px", md: "88px" } }}
-    >
-      <Stack
-        direction="row"
-        alignItems="baseline"
-        justifyContent="space-between"
-        sx={{ borderTop: "1px solid var(--ink)", pt: 2, mb: 7 }}
-      >
-        <Typography
-          component="h2"
-          sx={{
-            fontSize: { xs: 30, md: 46 },
-            fontWeight: 800,
-            letterSpacing: "-.045em",
-          }}
-        >
+    <section id="proyectos" className="projects-section">
+      <div className="section-kicker">
+        <span>PORTFOLIO / 2025—2026</span>
+        <span>✦</span>
+      </div>
+      <div className="projects-heading">
+        <h2>
           {t("selectedWork")}
-        </Typography>
-        <Typography sx={{ color: "text.secondary" }}>2025—2026</Typography>
-      </Stack>
-      <Stack spacing={{ xs: 9, md: 13 }}>
-        {projects.map((project, index) => (
-          <ProjectArticle key={project.title} project={project} index={index} />
+          <sup>08</sup>
+        </h2>
+        <p>{t("workIntro")}</p>
+      </div>
+      <div
+        className="project-filters"
+        role="group"
+        aria-label={t("filterLabel")}
+      >
+        {["all", "apps", "web", "tools"].map((category) => (
+          <button
+            key={category}
+            type="button"
+            aria-pressed={filter === category}
+            onClick={() => setFilter(category)}
+          >
+            {t(`filters.${category}`)}
+            <span>
+              {category === "all"
+                ? projects.length
+                : projects.filter((project) => project.category === category)
+                    .length}
+            </span>
+          </button>
         ))}
-      </Stack>
-    </Box>
+      </div>
+      <span className="sr-only" role="status">
+        {t("resultCount", { count: visibleProjects.length })}
+      </span>
+      <div className="project-grid">
+        {visibleProjects.map((project, index) => (
+          <ProjectArticle key={project.id} project={project} index={index} />
+        ))}
+      </div>
+    </section>
   );
 }
 
 export function HomeContent() {
   return (
     <>
-      <HeroSection />
       <ProjectsSection />
+      <HeroSection />
     </>
   );
 }

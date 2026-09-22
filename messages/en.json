@@ -55,6 +55,14 @@
       "lv": {
         "eyebrow": "Pilates website",
         "description": "A calm, editorial website for Lidia Villanueva Bolívar, presenting personalised Pilates and mindful movement at every age."
+      },
+      "learn": {
+        "eyebrow": "Learn through play",
+        "description": "Vocabulary, grammar and expressions in six languages through translation, writing and matching games."
+      },
+      "santa": {
+        "eyebrow": "Secret Santa",
+        "description": "Organize a Secret Santa with a budget, date and exclusions. Each participant receives their assignment privately by email."
       }
     },
     "viewResume": "View CV (PDF)",
@@ -95,6 +103,17 @@
           "description": "Support and development for university applications: functional analysis, debugging, SQL queries and incident resolution with end users."
         }
       ]
+    },
+    "projectCount": "projects to explore",
+    "madeForPeople": "Made for people",
+    "workIntro": "Different ideas. The same attention to detail.",
+    "filterLabel": "Filter projects",
+    "resultCount": "{count} projects",
+    "filters": {
+      "all": "All",
+      "apps": "Apps",
+      "web": "Websites",
+      "tools": "Tools"
     }
   },
   "Legal": {
