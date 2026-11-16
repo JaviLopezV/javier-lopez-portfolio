@@ -88,7 +88,19 @@ const projects = [
     tone: "#1565c0",
     preview: "muiKit",
   },
+  {
+    id: "stories",
+    category: "apps",
+    number: "09",
+    title: "Lumbre · Arrow Stories",
+    url: "https://arrow-stories.vercel.app/",
+    tags: ["Next.js", "TypeScript", "i18n"],
+    tone: "#345548",
+    preview: "stories",
+  },
 ] as const;
+
+const projectTotal = String(projects.length).padStart(2, "0");
 
 function HeroSection() {
   const t = useTranslations("Home");
@@ -119,7 +131,9 @@ function HeroSection() {
           {t("viewWork")}
         </Button>
         <div className="hero-meta">
-          <span>08 {t("projectCount")}</span>
+          <span>
+            {projectTotal} {t("projectCount")}
+          </span>
           <span>React / Next.js / TypeScript</span>
         </div>
       </div>
@@ -175,7 +189,9 @@ function ProjectArticle({
       <div className="project-body">
         <div className="project-eyebrow">
           <span>{t(`projects.${project.id}.eyebrow`)}</span>
-          <span>{project.number} / 08</span>
+          <span>
+            {project.number} / {projectTotal}
+          </span>
         </div>
         <Typography
           component="h3"
@@ -234,7 +250,7 @@ function ProjectsSection() {
       <div className="projects-heading">
         <h2>
           {t("selectedWork")}
-          <sup>08</sup>
+          <sup>{projectTotal}</sup>
         </h2>
         <p>{t("workIntro")}</p>
       </div>

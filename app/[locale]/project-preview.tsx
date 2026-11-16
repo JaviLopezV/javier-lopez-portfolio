@@ -82,7 +82,16 @@ export default function ProjectPreview({
   type,
   tone,
 }: {
-  type: "cv" | "aj" | "pilates" | "muiKit" | "arrow" | "lv" | "learn" | "santa";
+  type:
+    | "cv"
+    | "aj"
+    | "pilates"
+    | "muiKit"
+    | "arrow"
+    | "lv"
+    | "learn"
+    | "santa"
+    | "stories";
   tone: string;
 }) {
   const t = useTranslations("Home");
@@ -221,6 +230,37 @@ export default function ProjectPreview({
         <PilatesPreview tone={tone} />
       ) : type === "arrow" ? (
         <ArrowPreview tone={tone} />
+      ) : type === "stories" ? (
+        <Box
+          aria-hidden="true"
+          sx={{
+            mt: 2,
+            height: "calc(100% - 50px)",
+            borderRadius: 3,
+            bgcolor: tone,
+            backgroundImage:
+              "linear-gradient(90deg, #162d27e6, #162d2726), url(/arrow-stories-forest.svg)",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            color: "#fff5d6",
+            display: "grid",
+            alignContent: "center",
+            px: { xs: 3, md: 4 },
+          }}
+        >
+          <Typography
+            sx={{
+              fontFamily: "Georgia, serif",
+              fontSize: { xs: 38, md: 52 },
+              lineHeight: 1,
+            }}
+          >
+            ◒ lumbre.
+          </Typography>
+          <Typography sx={{ mt: 1, fontSize: 12, fontWeight: 700 }}>
+            {t("projects.stories.eyebrow")}
+          </Typography>
+        </Box>
       ) : type === "lv" ? (
         <LvPreview tone={tone} />
       ) : (

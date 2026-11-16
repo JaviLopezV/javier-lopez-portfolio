@@ -60,6 +60,10 @@
         "eyebrow": "Aprender jugando",
         "description": "Vocabulario, gramática y expresiones en seis idiomas a través de juegos de traducción, escritura y parejas."
       },
+      "stories": {
+        "eyebrow": "Biblioteca digital",
+        "description": "Una biblioteca de cuentos en castellano, catalán e inglés, con un lector ajustable que recuerda dónde te quedaste. Permite enviar nuevos libros para su revisión."
+      },
       "santa": {
         "eyebrow": "Amigo invisible",
         "description": "Organiza un amigo invisible con presupuesto, fecha y exclusiones. Cada participante recibe su asignación de forma privada por email."

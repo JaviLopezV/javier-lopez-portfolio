@@ -60,6 +60,10 @@
         "eyebrow": "Learn through play",
         "description": "Vocabulary, grammar and expressions in six languages through translation, writing and matching games."
       },
+      "stories": {
+        "eyebrow": "Digital library",
+        "description": "A library of stories in Spanish, Catalan and English, with a customizable reader that remembers where you left off. Readers can submit new books for review."
+      },
       "santa": {
         "eyebrow": "Secret Santa",
         "description": "Organize a Secret Santa with a budget, date and exclusions. Each participant receives their assignment privately by email."
