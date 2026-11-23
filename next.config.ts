@@ -3,6 +3,9 @@ import { PHASE_DEVELOPMENT_SERVER } from "next/constants";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
+  outputFileTracingIncludes: {
+    "/entrevista/material/\\[asset\\]": ["./private/interview/*"],
+  },
   experimental: {
     rootParams: true,
   },

@@ -1,18 +1,17 @@
 "use client";
 
-import { portfolioOwner } from "../portfolio";
-
 import { useState } from "react";
-import { ArrowOutward, NorthEast } from "@mui/icons-material";
+import { ArrowOutward, LockOutlined, NorthEast } from "@mui/icons-material";
 import { Button, Link, Stack, Typography } from "@jlopvil/mui-kit";
 import { Chip } from "@mui/material";
 import { useTranslations } from "next-intl";
+import { Link as LocaleLink } from "../../i18n/navigation";
+import { portfolioOwner } from "../portfolio";
 import ProjectPreview from "./project-preview";
 
 const projects = [
   {
     id: "learn",
-    number: "01",
     title: "Arrow Learn Games",
     url: "https://arrow-learn-games.vercel.app/",
     tags: ["Next.js", "TypeScript", "i18n"],
@@ -22,7 +21,6 @@ const projects = [
   },
   {
     id: "santa",
-    number: "02",
     title: "Arrow Secret Santa",
     url: "https://arrow-secret-santa.vercel.app/",
     tags: ["Next.js", "Redis", "Email"],
@@ -33,7 +31,6 @@ const projects = [
   {
     id: "cv",
     category: "apps",
-    number: "03",
     title: "Next CV Builder",
     url: "https://arrow-cv-builder.vercel.app/",
     tags: ["Next.js", "i18n", "Local-first"],
@@ -43,7 +40,6 @@ const projects = [
   {
     id: "aj",
     category: "web",
-    number: "04",
     title: "Mantenimientos AJ",
     url: "https://mantenimientos-aj.vercel.app/es",
     tags: ["Next.js", "i18n", "SEO"],
@@ -53,7 +49,6 @@ const projects = [
   {
     id: "pilates",
     category: "apps",
-    number: "05",
     title: "Personal & Pilates",
     url: "https://personal-and-pilates.vercel.app/",
     tags: ["Next.js", "Prisma", "Bookings"],
@@ -63,7 +58,6 @@ const projects = [
   {
     id: "arrow",
     category: "tools",
-    number: "06",
     title: "Template Web Arrow",
     url: "https://arrow-template-web.vercel.app/",
     tags: ["Next.js", "i18n", "PWA"],
@@ -73,7 +67,6 @@ const projects = [
   {
     id: "lv",
     category: "web",
-    number: "07",
     title: "Lidia Villanueva Bolivar",
     url: "https://lidia-villanueva-bolivar.vercel.app",
     tags: ["Next.js", "i18n", "PWA"],
@@ -83,7 +76,6 @@ const projects = [
   {
     id: "muiKit",
     category: "tools",
-    number: "08",
     title: "MUI Component Library",
     url: "https://www.npmjs.com/package/@jlopvil/mui-kit",
     tags: ["React", "TypeScript", "Material UI"],
@@ -93,7 +85,6 @@ const projects = [
   {
     id: "stories",
     category: "apps",
-    number: "09",
     title: "Lumbre · Arrow Stories",
     url: "https://arrow-stories.vercel.app/",
     tags: ["Next.js", "TypeScript", "i18n"],
@@ -102,15 +93,13 @@ const projects = [
   },
 ] as const;
 
-const projectTotal = String(projects.length).padStart(2, "0");
-
-function HeroSection() {
+export function HeroSection() {
   const t = useTranslations("Home");
   return (
     <section className="portfolio-hero">
       <div className="hero-copy">
         <div className="hero-eyebrow">
-          <span className="status-dot" />
+          <span className="status-dot" aria-hidden="true" />
           {t("location")}
         </div>
         <h1>
@@ -119,41 +108,43 @@ function HeroSection() {
         <p className="hero-description">
           {t("heroDescription", { name: portfolioOwner })}
         </p>
-        <Button
-          href="#proyectos"
-          endIcon={<ArrowOutward />}
-          sx={{
-            bgcolor: "var(--acid)",
-            color: "var(--ink)",
-            borderRadius: 99,
-            px: 3,
-            py: 1.75,
-            fontSize: 15,
-            "&:hover": { bgcolor: "#c9f236", transform: "translateY(-3px)" },
-          }}
-        >
-          {t("viewWork")}
-        </Button>
-        <div className="hero-meta">
-          <span>
-            {projectTotal} {t("projectCount")}
-          </span>
-          <span>React / Next.js / TypeScript</span>
+        <div className="hero-actions">
+          <Button
+            href="#proyectos"
+            endIcon={<ArrowOutward />}
+            sx={{
+              bgcolor: "var(--acid)",
+              color: "var(--ink)",
+              borderRadius: 99,
+              px: 3,
+              py: 1.75,
+              fontSize: 15,
+              "&:hover": { bgcolor: "#c9f236", transform: "translateY(-3px)" },
+            }}
+          >
+            {t("viewWork")}
+          </Button>
+          <Button
+            component={LocaleLink}
+            href="/sobre-mi"
+            startIcon={<LockOutlined />}
+            variant="outlined"
+            sx={{
+              borderRadius: 99,
+              borderColor: "var(--line)",
+              px: 2.5,
+              py: 1.5,
+            }}
+          >
+            {t("navAbout")}
+          </Button>
         </div>
       </div>
       <div className="hero-art" aria-hidden="true">
         <div className="art-grid" />
-        <span className="art-label">IDEA → CODE → LIVE</span>
         <div className="orbit orbit-one" />
         <div className="orbit orbit-two" />
         <div className="art-symbol">↗</div>
-        <div className="floating-label label-top">
-          &lt;build /&gt;<span>●</span>
-        </div>
-        <div className="floating-label label-bottom">
-          <span>✦</span> {t("madeForPeople")}
-        </div>
-        <span className="art-caption">JL. / DIGITAL PLAYGROUND</span>
       </div>
     </section>
   );
@@ -193,9 +184,6 @@ function ProjectArticle({
       <div className="project-body">
         <div className="project-eyebrow">
           <span>{t(`projects.${project.id}.eyebrow`)}</span>
-          <span>
-            {project.number} / {projectTotal}
-          </span>
         </div>
         <Typography
           component="h3"
@@ -247,15 +235,8 @@ function ProjectsSection() {
   );
   return (
     <section id="proyectos" className="projects-section">
-      <div className="section-kicker">
-        <span>PORTFOLIO / 2025—2026</span>
-        <span>✦</span>
-      </div>
       <div className="projects-heading">
-        <h2>
-          {t("selectedWork")}
-          <sup>{projectTotal}</sup>
-        </h2>
+        <h2>{t("selectedWork")}</h2>
         <p>{t("workIntro")}</p>
       </div>
       <div
@@ -295,8 +276,8 @@ function ProjectsSection() {
 export function HomeContent() {
   return (
     <>
-      <ProjectsSection />
       <HeroSection />
+      <ProjectsSection />
     </>
   );
 }

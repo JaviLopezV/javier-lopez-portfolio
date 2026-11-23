@@ -69,47 +69,7 @@
         "description": "Organiza un amigo invisible con presupuesto, fecha y exclusiones. Cada participante recibe su asignación de forma privada por email."
       }
     },
-    "viewResume": "Ver CV (PDF)",
-    "resumePreviewAlt": "Vista previa del currículum de Javier López Villanueva",
     "navAbout": "Sobre mí",
-    "about": {
-      "eyebrow": "Sobre mí",
-      "title": "Tecnología con criterio.\nProducto con propósito.",
-      "intro": "Soy Javier López Villanueva, Senior Frontend Engineer / Squad Lead especializado en React, Next.js y TypeScript. Combino desarrollo práctico, arquitectura frontend y liderazgo de equipo para transformar necesidades de negocio en interfaces fiables y mantenibles.",
-      "independentWork": "Además del trabajo en producto, desarrollo plataformas multidioma, herramientas privadas y una librería pública de componentes React. Entre mis proyectos están Next CV Builder, Personal & Pilates, Mantenimientos AJ, Template Web Arrow y la web de Lidia Villanueva Bolívar, con atención a la accesibilidad, la experiencia de usuario y la calidad del código.",
-      "experience": "Experiencia",
-      "skills": "Stack principal",
-      "education": "Formación",
-      "languages": "Idiomas",
-      "educationItems": [
-        "Ingeniería Informática · Universitat Oberta de Catalunya · En curso",
-        "Desarrollo de Aplicaciones Web · Institut de Badia del Vallès",
-        "Sistemas Microinformáticos y Redes · Institut de Badia del Vallès"
-      ],
-      "languageDetail": "Español y catalán nativos · Inglés técnico / profesional",
-      "jobs": [
-        {
-          "company": "CaixaBank Tech",
-          "role": "Frontend Engineer / Squad Lead",
-          "period": "Dic 2023 – Actualidad",
-          "description": "Lidero un equipo frontend en aplicaciones corporativas y sigo participando en la implementación. Trabajo con React, TypeScript y Material UI / OpenFront; coordino arquitectura, planificación, mentoring y code review junto a backend y stakeholders."
-        },
-        {
-          "company": "Appdrawn Solutions",
-          "role": "Full Stack Developer / Product Owner",
-          "period": "Nov 2022 – Dic 2023",
-          "description": "Desarrollé y asumí el ownership de Airlinen, una plataforma de servicios para alquileres de corta estancia, de extremo a extremo: backend, frontend, flujos y operación. Implementé funcionalidades con Ruby on Rails y React, y definí y validé requisitos con negocio."
-        },
-        {
-          "company": "SIGMA",
-          "role": "Application Developer",
-          "period": "Jun 2018 – Jun 2019",
-          "description": "Soporte y desarrollo de aplicaciones universitarias: análisis funcional, diagnóstico de errores, consultas SQL y resolución de incidencias con usuarios finales."
-        }
-      ]
-    },
-    "projectCount": "proyectos para explorar",
-    "madeForPeople": "Hecho para personas",
     "workIntro": "Ideas distintas. La misma atención al detalle.",
     "filterLabel": "Filtrar proyectos",
     "resultCount": "{count} proyectos",
@@ -230,6 +190,7 @@
             "title": "Situación actual",
             "paragraphs": [
               "La aplicación no instala cookies propias de analítica, publicidad, seguimiento ni personalización. El idioma se determina mediante la URL (/es, /ca o /en) y, en la primera visita, mediante la preferencia de idioma enviada por el navegador; no se guarda en una cookie propia.",
+              "Al introducir el código de «Sobre mí», se guarda una cookie de acceso (portfolio_interview) durante 24 horas para mantener abierta la sesión al navegar por el perfil y el CV.",
               "Por este motivo no se muestra un banner de consentimiento: no se utilizan cookies no esenciales que requieran autorización previa."
             ]
           },
@@ -260,5 +221,63 @@
         ]
       }
     }
+  },
+  "About": {
+    "eyebrow": "Sobre mí",
+    "title": "Tecnología con criterio.\nProducto con propósito.",
+    "intro": "Soy Javier López Villanueva, Senior Frontend Engineer / Squad Lead especializado en React, Next.js y TypeScript. Combino desarrollo práctico, arquitectura frontend y liderazgo de equipo para transformar necesidades de negocio en interfaces fiables y mantenibles.",
+    "independentWork": "Además del trabajo en producto, desarrollo plataformas multidioma, herramientas privadas y una librería pública de componentes React. Entre mis proyectos están Next CV Builder, Personal & Pilates, Mantenimientos AJ, Template Web Arrow y la web de Lidia Villanueva Bolívar, con atención a la accesibilidad, la experiencia de usuario y la calidad del código.",
+    "experience": "Experiencia",
+    "skills": "Stack principal",
+    "education": "Formación",
+    "languages": "Idiomas",
+    "educationItems": [
+      "Ingeniería Informática · Universitat Oberta de Catalunya · En curso",
+      "Desarrollo de Aplicaciones Web · Institut de Badia del Vallès",
+      "Sistemas Microinformáticos y Redes · Institut de Badia del Vallès"
+    ],
+    "languageDetail": "Español y catalán nativos · Inglés técnico / profesional",
+    "jobs": [
+      {
+        "company": "CaixaBank Tech",
+        "role": "Frontend Engineer / Squad Lead",
+        "period": "Dic 2023 – Actualidad",
+        "description": "Lidero un equipo frontend en aplicaciones corporativas y sigo participando en la implementación. Trabajo con React, TypeScript y Material UI / OpenFront; coordino arquitectura, planificación, mentoring y code review junto a backend y stakeholders."
+      },
+      {
+        "company": "Appdrawn Solutions",
+        "role": "Full Stack Developer / Product Owner",
+        "period": "Nov 2022 – Dic 2023",
+        "description": "Desarrollé y asumí el ownership de Airlinen, una plataforma de servicios para alquileres de corta estancia, de extremo a extremo: backend, frontend, flujos y operación. Implementé funcionalidades con Ruby on Rails y React, y definí y validé requisitos con negocio."
+      },
+      {
+        "company": "SIGMA",
+        "role": "Application Developer",
+        "period": "Jun 2018 – Jun 2019",
+        "description": "Soporte y desarrollo de aplicaciones universitarias: análisis funcional, diagnóstico de errores, consultas SQL y resolución de incidencias con usuarios finales."
+      }
+    ],
+    "coverLetter": {
+      "title": "Carta de presentación",
+      "paragraphs": [
+        "Hola, equipo de selección:",
+        "Me interesa trabajar en productos donde las decisiones de frontend tengan un impacto directo en la experiencia de las personas. Como Frontend Engineer y Squad Lead en CaixaBank Tech, combino el desarrollo con React y TypeScript con decisiones de arquitectura, revisiones de código y acompañamiento al equipo.",
+        "En Appdrawn asumí la responsabilidad de Airlinen de principio a fin. Trabajar con negocio y participar tanto en el frontend como en el backend me enseñó a convertir requisitos abiertos en entregas que se pueden validar. En mis proyectos independientes sigo aplicando ese criterio a productos multidioma, herramientas y componentes reutilizables.",
+        "Me gustaría conversar sobre los retos de vuestro equipo y cómo podría contribuir desde la ingeniería de producto y el liderazgo técnico. Gracias por dedicar tiempo a conocer mi trabajo."
+      ],
+      "contact": "Contactar por correo"
+    },
+    "viewResume": "Ver CV (PDF)",
+    "resumePreviewAlt": "Vista previa del currículum de Javier López Villanueva"
+  },
+  "InterviewAccess": {
+    "title": "Acceso a Sobre mí",
+    "description": "Introduce el código que te he compartido para ver mi trayectoria, carta de presentación y CV.",
+    "code": "Código de acceso",
+    "cancel": "Volver al portfolio",
+    "submit": "Acceder",
+    "pending": "Comprobando…",
+    "invalid": "El código es incorrecto. Compruébalo y vuelve a intentarlo.",
+    "unavailable": "El acceso todavía no está habilitado."
   }
 }

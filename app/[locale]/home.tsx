@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { AboutContent } from "./about-content";
+import type { ReactNode } from "react";
+import { LockOutlined } from "@mui/icons-material";
 import { Container, Link, Stack, Typography } from "@jlopvil/mui-kit";
 import { Box, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { useTranslations } from "next-intl";
@@ -24,21 +24,8 @@ const theme = createTheme({
   },
 });
 
-function SiteHeader({
-  about,
-  canViewAbout,
-  onShowProjects,
-  onShowAbout,
-}: {
-  about: boolean;
-  canViewAbout: boolean;
-  onShowProjects: () => void;
-  onShowAbout: () => void;
-}) {
+function SiteHeader({ about }: { about: boolean }) {
   const t = useTranslations("Home");
-  const projectsHref = canViewAbout
-    ? "/?about=1&view=projects#proyectos"
-    : "/#proyectos";
   return (
     <Box
       component="header"
@@ -65,9 +52,8 @@ function SiteHeader({
         >
           <Link
             component={LocaleLink}
-            href={canViewAbout ? "/?about=1&view=projects" : "/"}
+            href="/"
             underline="none"
-            onClick={onShowProjects}
             sx={{
               display: "inline-flex",
               alignItems: "center",
@@ -124,10 +110,9 @@ function SiteHeader({
           >
             <Link
               component={LocaleLink}
-              href={projectsHref}
+              href="/#proyectos"
               underline="none"
               aria-current={!about ? "page" : undefined}
-              onClick={onShowProjects}
               sx={{
                 flex: { xs: 1, md: "none" },
                 textAlign: "center",
@@ -146,31 +131,31 @@ function SiteHeader({
             >
               {t("navProjects")}
             </Link>
-            {canViewAbout && (
-              <Link
-                component={LocaleLink}
-                href="/?about=1"
-                underline="none"
-                aria-current={about ? "page" : undefined}
-                onClick={onShowAbout}
-                sx={{
-                  flex: { xs: 1, md: "none" },
-                  textAlign: "center",
-                  px: { xs: 2, md: 2.5 },
-                  py: 0.9,
-                  borderRadius: "999px",
-                  fontSize: 13,
-                  fontWeight: 700,
-                  bgcolor: about ? "var(--ink)" : "transparent",
-                  color: about ? "var(--paper)" : "var(--ink)",
-                  "&:hover": {
-                    bgcolor: about ? "var(--ink)" : "rgba(25, 26, 22, .08)",
-                  },
-                }}
-              >
-                {t("navAbout")}
-              </Link>
-            )}
+            <Link
+              component={LocaleLink}
+              href="/sobre-mi"
+              underline="none"
+              aria-current={about ? "page" : undefined}
+              sx={{
+                flex: { xs: 1, md: "none" },
+                textAlign: "center",
+                px: { xs: 2, md: 2.5 },
+                py: 0.9,
+                borderRadius: "999px",
+                fontSize: 13,
+                fontWeight: 700,
+                bgcolor: about ? "var(--ink)" : "transparent",
+                color: about ? "var(--paper)" : "var(--ink)",
+                "&:hover": {
+                  bgcolor: about ? "var(--ink)" : "rgba(25, 26, 22, .08)",
+                },
+              }}
+            >
+              <LockOutlined
+                sx={{ fontSize: 15, verticalAlign: "-3px", mr: 0.6 }}
+              />
+              {t("navAbout")}
+            </Link>
           </Stack>
 
           <Stack
@@ -202,7 +187,7 @@ function SiteHeader({
               />
               {t("availability")}
             </Typography>
-            <LanguageDropdown about={about} canViewAbout={canViewAbout} />
+            <LanguageDropdown />
           </Stack>
         </Box>
       </Container>
@@ -210,45 +195,31 @@ function SiteHeader({
   );
 }
 
-export default function Home() {
-  const [view, setView] = useState({ canViewAbout: false, about: false });
-  useEffect(() => {
-    const syncSection = () => {
-      const params = new URLSearchParams(window.location.search);
-      const canViewAbout = params.get("about") === "1";
-      const about = canViewAbout && params.get("view") !== "projects";
-      setView({ canViewAbout, about });
-      if (about) window.scrollTo(0, 0);
-    };
-    syncSection();
-    window.addEventListener("popstate", syncSection);
-    return () => window.removeEventListener("popstate", syncSection);
-  }, []);
-  useEffect(() => {
-    if (!view.about && window.location.hash === "#proyectos") {
-      document.getElementById("proyectos")?.scrollIntoView();
-    }
-  }, [view.about]);
+export function PortfolioShell({
+  about = false,
+  children,
+}: {
+  about?: boolean;
+  children: ReactNode;
+}) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <SiteHeader
-        about={view.about}
-        canViewAbout={view.canViewAbout}
-        onShowProjects={() =>
-          setView((current) => ({ ...current, about: false }))
-        }
-        onShowAbout={() => {
-          setView((current) => ({ ...current, about: true }));
-          window.scrollTo(0, 0);
-        }}
-      />
+      <SiteHeader about={about} />
       <Box component="main">
         <Container maxWidth={false} sx={{ px: { xs: 2.5, md: 5, lg: 8 } }}>
-          {view.about ? <AboutContent /> : <HomeContent />}
+          {children}
         </Container>
       </Box>
       <SiteFooter />
     </ThemeProvider>
+  );
+}
+
+export default function Home() {
+  return (
+    <PortfolioShell>
+      <HomeContent />
+    </PortfolioShell>
   );
 }

@@ -1,6 +1,7 @@
 import SiteLoader from "../site-loader";
 import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "../../i18n/routing";
 import { siteUrl } from "../seo";
@@ -26,11 +27,15 @@ export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) notFound();
+  const { Home, InterviewAccess } = await getMessages({ locale });
+
   return (
     <html lang={locale}>
       <body>
         <SiteLoader />
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={{ Home, InterviewAccess }}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -1,10 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import { ArrowOutward } from "@mui/icons-material";
 import { Link, Stack, Typography } from "@jlopvil/mui-kit";
 import { Box, Button, Chip } from "@mui/material";
-import { useLocale, useTranslations } from "next-intl";
+import { getLocale, getTranslations } from "next-intl/server";
 
 type Job = {
   company: string;
@@ -13,17 +11,38 @@ type Job = {
   description: string;
 };
 
-export function AboutContent() {
-  const t = useTranslations("Home");
-  const locale = useLocale();
-  const resumePdf =
-    locale === "en" ? "/javier-lopez-cv-en.pdf" : "/javier-lopez-cv.pdf";
-  const resumePreview =
-    locale === "en"
-      ? "/javier-lopez-cv-en-preview.png"
-      : "/javier-lopez-cv-preview.png";
-  const jobs = t.raw("about.jobs") as Job[];
-  const education = t.raw("about.educationItems") as string[];
+async function CoverLetter() {
+  const t = await getTranslations("About");
+  const paragraphs = t.raw("coverLetter.paragraphs") as string[];
+
+  return (
+    <Box component="section" className="cover-letter">
+      <Typography component="h2" sx={{ fontSize: 30, fontWeight: 800 }}>
+        {t("coverLetter.title")}
+      </Typography>
+      {paragraphs.map((paragraph) => (
+        <Typography
+          key={paragraph}
+          sx={{ color: "text.secondary", lineHeight: 1.7 }}
+        >
+          {paragraph}
+        </Typography>
+      ))}
+      <Link href="mailto:jlopvil@gmail.com" sx={{ fontWeight: 700 }}>
+        {t("coverLetter.contact")}
+      </Link>
+    </Box>
+  );
+}
+
+export async function AboutContent() {
+  const t = await getTranslations("About");
+  const locale = await getLocale();
+  const resumePath = locale === "en" ? "javier-lopez-cv-en" : "javier-lopez-cv";
+  const resumePdf = `/entrevista/material/${resumePath}.pdf`;
+  const resumePreview = `/entrevista/material/${resumePath}-preview.png`;
+  const jobs = t.raw("jobs") as Job[];
+  const education = t.raw("educationItems") as string[];
   return (
     <Box id="sobre-mi" sx={{ py: { xs: 7, md: 10 } }}>
       <Typography
@@ -35,7 +54,7 @@ export function AboutContent() {
           mb: 3,
         }}
       >
-        {t("about.eyebrow")}
+        {t("eyebrow")}
       </Typography>
       <Typography
         component="h1"
@@ -49,7 +68,7 @@ export function AboutContent() {
           mb: 5,
         }}
       >
-        {t("about.title")}
+        {t("title")}
       </Typography>
       <Box
         sx={{
@@ -61,7 +80,7 @@ export function AboutContent() {
       >
         <Stack spacing={6}>
           <Typography sx={{ fontSize: { xs: 19, md: 23 }, lineHeight: 1.6 }}>
-            {t("about.intro")}
+            {t("intro")}
           </Typography>
           <Typography
             sx={{
@@ -70,14 +89,15 @@ export function AboutContent() {
               color: "text.secondary",
             }}
           >
-            {t("about.independentWork")}
+            {t("independentWork")}
           </Typography>
+          <CoverLetter />
           <Box component="section">
             <Typography
               component="h2"
               sx={{ fontSize: 30, fontWeight: 800, mb: 3 }}
             >
-              {t("about.experience")}
+              {t("experience")}
             </Typography>
             {jobs.map((job) => (
               <Box
@@ -125,6 +145,7 @@ export function AboutContent() {
             >
               <Image
                 src={resumePreview}
+                unoptimized
                 alt={t("resumePreviewAlt")}
                 width={848}
                 height={1200}
@@ -153,7 +174,7 @@ export function AboutContent() {
               component="h2"
               sx={{ fontSize: 26, fontWeight: 800, mb: 2 }}
             >
-              {t("about.skills")}
+              {t("skills")}
             </Typography>
             <Stack direction="row" flexWrap="wrap" gap={1}>
               {[
@@ -186,7 +207,7 @@ export function AboutContent() {
               component="h2"
               sx={{ fontSize: 26, fontWeight: 800, mb: 2 }}
             >
-              {t("about.education")}
+              {t("education")}
             </Typography>
             {education.map((item) => (
               <Typography
@@ -202,10 +223,10 @@ export function AboutContent() {
               component="h2"
               sx={{ fontSize: 26, fontWeight: 800, mb: 2 }}
             >
-              {t("about.languages")}
+              {t("languages")}
             </Typography>
             <Typography sx={{ color: "text.secondary", lineHeight: 1.6 }}>
-              {t("about.languageDetail")}
+              {t("languageDetail")}
             </Typography>
           </Box>
         </Stack>
