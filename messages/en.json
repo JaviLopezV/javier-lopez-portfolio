@@ -1,9 +1,9 @@
 {
   "Metadata": {
-    "title": "Javier López Villanueva | Frontend Developer",
-    "description": "Portfolio of Javier López Villanueva, a frontend developer in Castellón, Spain. Web projects built with React, Next.js, and TypeScript.",
-    "openGraphTitle": "Javier López Villanueva | Frontend Developer",
-    "openGraphDescription": "Portfolio of Javier López Villanueva, a frontend developer in Castellón, Spain. Web projects built with React, Next.js, and TypeScript.",
+    "title": "Javier López Villanueva | Full-stack developer specialising in frontend",
+    "description": "Portfolio of Javier López Villanueva, a full-stack developer specialising in frontend, based in Cerdanyola del Vallès, Barcelona. Projects with React, Next.js and TypeScript.",
+    "openGraphTitle": "Javier López Villanueva | Full-stack developer specialising in frontend",
+    "openGraphDescription": "Portfolio of Javier López Villanueva, a full-stack developer specialising in frontend, based in Cerdanyola del Vallès, Barcelona. Projects with React, Next.js and TypeScript.",
     "imageAlt": "Javier López Villanueva's portfolio"
   },
   "Home": {
@@ -11,10 +11,10 @@
     "navigation": "Main navigation",
     "languageSelector": "Select language",
     "availability": "Available for new opportunities",
-    "location": "Web development · Castellón, Spain",
+    "location": "Cerdanyola del Vallès, Barcelona",
     "heroTitle": "Ideas that live",
     "heroEmphasis": "on the web.",
-    "heroDescription": "I’m {name}, a frontend developer based in Castellón, Spain. I design and build web applications with React, Next.js, and TypeScript.",
+    "heroDescription": "I’m {name}, a full-stack developer specialising in frontend. I design and build web applications with React, Next.js and TypeScript.",
     "viewWork": "View selected work",
     "selectedWork": "Selected work",
     "visitProject": "Visit project",
@@ -223,7 +223,7 @@
   "About": {
     "eyebrow": "About me",
     "title": "Thoughtful technology.\nPurposeful products.",
-    "intro": "I’m Javier López Villanueva, a Senior Frontend Engineer / Squad Lead specialising in React, Next.js and TypeScript. I combine hands-on development, frontend architecture and team leadership to turn business needs into reliable, maintainable interfaces.",
+    "intro": "I’m Javier López Villanueva, a full-stack developer specialising in frontend. I combine end-to-end application development, frontend architecture and team leadership to build reliable, maintainable products.",
     "independentWork": "Alongside product work, I build multilingual platforms, privacy-conscious tools and a public React component library. My projects include Next CV Builder, Personal & Pilates, Mantenimientos AJ, Template Web Arrow and Lidia Villanueva Bolívar’s website, with a focus on accessibility, user experience and code quality.",
     "experience": "Experience",
     "skills": "Core stack",
