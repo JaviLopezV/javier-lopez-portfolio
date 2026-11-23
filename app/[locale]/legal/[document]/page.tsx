@@ -2,34 +2,38 @@ import { ArrowBack } from "@mui/icons-material";
 import { Container, Stack, Typography } from "@jlopvil/mui-kit";
 import { Box } from "@mui/material";
 import type { Metadata } from "next";
+import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link as LocaleLink } from "../../../../i18n/navigation";
+import { routing } from "../../../../i18n/routing";
+import { legalDocuments } from "../../../legal-documents";
+import { portfolioOwner } from "../../../portfolio";
+import { localizedAlternates } from "../../../seo";
 
-const documents = ["legal", "privacy", "cookies"] as const;
-type Document = (typeof documents)[number];
+type Document = (typeof legalDocuments)[number];
 type Props = {
   params: Promise<{ locale: string; document: string }>;
 };
 type Section = { title: string; paragraphs: string[] };
 
 function isDocument(value: string): value is Document {
-  return documents.includes(value as Document);
+  return legalDocuments.includes(value as Document);
 }
 
 export function generateStaticParams() {
-  return documents.map((document) => ({ document }));
+  return legalDocuments.map((document) => ({ document }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { document, locale } = await params;
-  if (!isDocument(document)) return {};
+  if (!isDocument(document) || !hasLocale(routing.locales, locale)) notFound();
 
   const t = await getTranslations({ locale, namespace: "Legal" });
   return {
-    title: `${t(`documents.${document}.title`)} — Javier López`,
+    title: `${t(`documents.${document}.title`)} — ${portfolioOwner}`,
     description: t(`documents.${document}.description`),
-    robots: { index: true, follow: true },
+    alternates: localizedAlternates(locale, `/legal/${document}`),
   };
 }
 

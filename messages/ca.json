@@ -1,10 +1,10 @@
 {
   "Metadata": {
-    "title": "Javier López — Desenvolupament web",
-    "description": "Portafolis de Javier López. Productes digitals creats amb Next.js, TypeScript i Material UI.",
-    "openGraphTitle": "Javier López — Idees que viuen al web",
-    "openGraphDescription": "Productes digitals creats amb Next.js, TypeScript i Material UI.",
-    "imageAlt": "Portafolis de Javier López"
+    "title": "Javier López Villanueva | Desenvolupador frontend",
+    "description": "Portafolis de Javier López Villanueva, desenvolupador frontend a Castelló, Espanya. Projectes web amb React, Next.js i TypeScript.",
+    "openGraphTitle": "Javier López Villanueva | Desenvolupador frontend",
+    "openGraphDescription": "Portafolis de Javier López Villanueva, desenvolupador frontend a Castelló, Espanya. Projectes web amb React, Next.js i TypeScript.",
+    "imageAlt": "Portafolis de Javier López Villanueva"
   },
   "Home": {
     "navProjects": "Projectes",
@@ -14,7 +14,7 @@
     "location": "Desenvolupament web · Castelló, Espanya",
     "heroTitle": "Idees que viuen",
     "heroEmphasis": "al web.",
-    "heroDescription": "Dissenyo i desenvolupo experiències digitals útils, ràpides i pensades per a persones reals.",
+    "heroDescription": "Soc {name}, desenvolupador frontend a Castelló. Dissenyo i desenvolupo aplicacions web amb React, Next.js i TypeScript.",
     "viewWork": "Veure projectes destacats",
     "selectedWork": "Projectes destacats",
     "visitProject": "Visitar el projecte",

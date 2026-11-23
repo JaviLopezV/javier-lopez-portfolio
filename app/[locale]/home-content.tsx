@@ -1,5 +1,7 @@
 "use client";
 
+import { portfolioOwner } from "../portfolio";
+
 import { useState } from "react";
 import { ArrowOutward, NorthEast } from "@mui/icons-material";
 import { Button, Link, Stack, Typography } from "@jlopvil/mui-kit";
@@ -114,7 +116,9 @@ function HeroSection() {
         <h1>
           {t("heroTitle")} <span>{t("heroEmphasis")}</span>
         </h1>
-        <p className="hero-description">{t("heroDescription")}</p>
+        <p className="hero-description">
+          {t("heroDescription", { name: portfolioOwner })}
+        </p>
         <Button
           href="#proyectos"
           endIcon={<ArrowOutward />}

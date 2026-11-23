@@ -1,10 +1,10 @@
 {
   "Metadata": {
-    "title": "Javier López — Web development",
-    "description": "Javier López's portfolio. Digital products built with Next.js, TypeScript and Material UI.",
-    "openGraphTitle": "Javier López — Ideas that live on the web",
-    "openGraphDescription": "Digital products built with Next.js, TypeScript and Material UI.",
-    "imageAlt": "Javier López's portfolio"
+    "title": "Javier López Villanueva | Frontend Developer",
+    "description": "Portfolio of Javier López Villanueva, a frontend developer in Castellón, Spain. Web projects built with React, Next.js, and TypeScript.",
+    "openGraphTitle": "Javier López Villanueva | Frontend Developer",
+    "openGraphDescription": "Portfolio of Javier López Villanueva, a frontend developer in Castellón, Spain. Web projects built with React, Next.js, and TypeScript.",
+    "imageAlt": "Javier López Villanueva's portfolio"
   },
   "Home": {
     "navProjects": "Projects",
@@ -14,7 +14,7 @@
     "location": "Web development · Castellón, Spain",
     "heroTitle": "Ideas that live",
     "heroEmphasis": "on the web.",
-    "heroDescription": "I design and develop useful, fast digital experiences made for real people.",
+    "heroDescription": "I’m {name}, a frontend developer based in Castellón, Spain. I design and build web applications with React, Next.js, and TypeScript.",
     "viewWork": "View selected work",
     "selectedWork": "Selected work",
     "visitProject": "Visit project",

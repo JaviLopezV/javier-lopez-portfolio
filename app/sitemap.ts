@@ -1,27 +1,15 @@
 import type { MetadataRoute } from "next";
+import { routing } from "../i18n/routing";
+import { legalDocuments } from "./legal-documents";
+import { localizedAlternates } from "./seo";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "http://localhost:3000");
-const locales = ["es", "ca", "en"] as const;
-const paths = ["", "/legal/legal", "/legal/privacy", "/legal/cookies"];
+const paths = ["", ...legalDocuments.map((document) => `/legal/${document}`)];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return locales.flatMap((locale) =>
-    paths.map((path) => ({
-      url: `${siteUrl}/${locale}${path}`,
-      lastModified: new Date("2026-09-01"),
-      changeFrequency: path ? ("yearly" as const) : ("monthly" as const),
-      priority: path ? 0.3 : 1,
-      alternates: {
-        languages: {
-          es: `${siteUrl}/es${path}`,
-          ca: `${siteUrl}/ca${path}`,
-          en: `${siteUrl}/en${path}`,
-        },
-      },
-    })),
+  return routing.locales.flatMap((locale) =>
+    paths.map((path) => {
+      const { canonical, languages } = localizedAlternates(locale, path);
+      return { url: canonical, alternates: { languages } };
+    }),
   );
 }
